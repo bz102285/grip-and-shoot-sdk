@@ -58,3 +58,4 @@ if [ -e scripts/public-headers.txt ]
 fi
 
 cp scripts/README.pdf ${OUTPUT}/README.pdf
+cp -r GripSampleApp/ ${OUTPUT}/SampleApp/
