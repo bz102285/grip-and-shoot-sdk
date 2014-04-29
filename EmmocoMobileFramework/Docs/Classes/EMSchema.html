@@ -1,0 +1,2251 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>EMSchema Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		
+		<div id="em-wrapper">
+			<style>
+				#utility_bar
+				{
+					position: relative;
+					height: 35px;
+					/*background: #231f20 url(../images/bg_tagline.png) no-repeat right
+					center;*/
+					background: #231f20 url(http://www.emmoco.com/images/bg_tagline.png) no-repeat right center;
+					color: #efefef;
+					overflow: hidden;
+					padding-left: 10px;
+				}
+
+				#utility_bar p
+				{
+					margin-top: 9px;
+					margin-bottom: 0;
+				}
+
+				#utility_bar a
+				{
+					color: #efefef;
+					margin-right: 15px;
+					padding: 2px;
+				}
+
+				#utility_bar a:hover
+				{
+					color: #fff;
+				}
+
+				#utility_bar a.selected
+				{
+					text-decoration: none;
+					background-color: #555;
+				}
+			</style>
+			<!-- begin utility bar -->
+			<div id="utility_bar">
+
+				<!-- user info / logout link -->
+				<p>
+					<a href="http://em-hub.com/">Em-Hub</a>
+					<a href="http://wiki.emmoco.com/">Wiki</a>
+					<a href="http://android.emmoco.com/">Android Docs</a>
+					<a class="selected" href="http://ios.emmoco.com/">iOS Docs</a>
+          <a href="http://support.emmoco.com/">Support</a>
+				</p>
+
+			</div>
+			<!-- end utility bar -->
+		
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">iOS Framework </a></h1>
+				<a id="developerHome" href="../index.html">Emmoco, Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">EMSchema Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/schemaFromFile:">&nbsp;&nbsp;&nbsp;&nbsp;+ schemaFromFile:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/UUID">&nbsp;&nbsp;&nbsp;&nbsp;- UUID</option>
+	
+	<option value="//api/name/accessForResource:">&nbsp;&nbsp;&nbsp;&nbsp;- accessForResource:</option>
+	
+	<option value="//api/name/alignmentForStandardType:">&nbsp;&nbsp;&nbsp;&nbsp;- alignmentForStandardType:</option>
+	
+	<option value="//api/name/applicationResources">&nbsp;&nbsp;&nbsp;&nbsp;- applicationResources</option>
+	
+	<option value="//api/name/broadcastResourceName">&nbsp;&nbsp;&nbsp;&nbsp;- broadcastResourceName</option>
+	
+	<option value="//api/name/buildDate">&nbsp;&nbsp;&nbsp;&nbsp;- buildDate</option>
+	
+	<option value="//api/name/byteAlignmentForResource:">&nbsp;&nbsp;&nbsp;&nbsp;- byteAlignmentForResource:</option>
+	
+	<option value="//api/name/enumValuesForType:">&nbsp;&nbsp;&nbsp;&nbsp;- enumValuesForType:</option>
+	
+	<option value="//api/name/fieldNamesForType:">&nbsp;&nbsp;&nbsp;&nbsp;- fieldNamesForType:</option>
+	
+	<option value="//api/name/fieldsForType:">&nbsp;&nbsp;&nbsp;&nbsp;- fieldsForType:</option>
+	
+	<option value="//api/name/idForResource:">&nbsp;&nbsp;&nbsp;&nbsp;- idForResource:</option>
+	
+	<option value="//api/name/maxResourceSize">&nbsp;&nbsp;&nbsp;&nbsp;- maxResourceSize</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;- name</option>
+	
+	<option value="//api/name/nameForResourceWithID:">&nbsp;&nbsp;&nbsp;&nbsp;- nameForResourceWithID:</option>
+	
+	<option value="//api/name/newResourceValueForResourceNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- newResourceValueForResourceNamed:</option>
+	
+	<option value="//api/name/numberParametersForType:">&nbsp;&nbsp;&nbsp;&nbsp;- numberParametersForType:</option>
+	
+	<option value="//api/name/numericRepresentationForType:">&nbsp;&nbsp;&nbsp;&nbsp;- numericRepresentationForType:</option>
+	
+	<option value="//api/name/numericalUUID">&nbsp;&nbsp;&nbsp;&nbsp;- numericalUUID</option>
+	
+	<option value="//api/name/owner">&nbsp;&nbsp;&nbsp;&nbsp;- owner</option>
+	
+	<option value="//api/name/protocolLevel">&nbsp;&nbsp;&nbsp;&nbsp;- protocolLevel</option>
+	
+	<option value="//api/name/resources">&nbsp;&nbsp;&nbsp;&nbsp;- resources</option>
+	
+	<option value="//api/name/schemaDescription">&nbsp;&nbsp;&nbsp;&nbsp;- schemaDescription</option>
+	
+	<option value="//api/name/schemaHash">&nbsp;&nbsp;&nbsp;&nbsp;- schemaHash</option>
+	
+	<option value="//api/name/sizeForResourceNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeForResourceNamed:</option>
+	
+	<option value="//api/name/sizeForStandardType:">&nbsp;&nbsp;&nbsp;&nbsp;- sizeForStandardType:</option>
+	
+	<option value="//api/name/stringLengthForType:">&nbsp;&nbsp;&nbsp;&nbsp;- stringLengthForType:</option>
+	
+	<option value="//api/name/systemResources">&nbsp;&nbsp;&nbsp;&nbsp;- systemResources</option>
+	
+	<option value="//api/name/typeOfResourceNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- typeOfResourceNamed:</option>
+	
+	<option value="//api/name/version">&nbsp;&nbsp;&nbsp;&nbsp;- version</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/schemaFromFile:">schemaFromFile:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/UUID">UUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accessForResource:">accessForResource:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alignmentForStandardType:">alignmentForStandardType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationResources">applicationResources</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/broadcastResourceName">broadcastResourceName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/buildDate">buildDate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/byteAlignmentForResource:">byteAlignmentForResource:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enumValuesForType:">enumValuesForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldNamesForType:">fieldNamesForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fieldsForType:">fieldsForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/idForResource:">idForResource:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maxResourceSize">maxResourceSize</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nameForResourceWithID:">nameForResourceWithID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/newResourceValueForResourceNamed:">newResourceValueForResourceNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberParametersForType:">numberParametersForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numericRepresentationForType:">numericRepresentationForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numericalUUID">numericalUUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/owner">owner</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/protocolLevel">protocolLevel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resources">resources</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/schemaDescription">schemaDescription</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/schemaHash">schemaHash</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeForResourceNamed:">sizeForResourceNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sizeForStandardType:">sizeForStandardType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringLengthForType:">stringLengthForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/systemResources">systemResources</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/typeOfResourceNamed:">typeOfResourceNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/version">version</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="EMSchema Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">EMSchema Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">EMSchema.h<br />EMSchema.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>A set of meta-data describing a set of <a href="#//api/name/resources">resources</a>.
+Written by Bob Frankel and Carolyn Vaughan</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/schemaFromFile:">+&nbsp;schemaFromFile:</a></code>
+		<span class="tooltip"><p>Creates a EMResourceSchema instance from the contents of a file.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accessForResource:">&ndash;&nbsp;accessForResource:</a></code>
+		<span class="tooltip"><p>Get the read/write/indicator access capabilities of a named resource</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationResources">&ndash;&nbsp;applicationResources</a></code>
+		<span class="tooltip"><p>Returns a sorted NSArray containing all application resource names in this schema</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberParametersForType:">&ndash;&nbsp;numberParametersForType:</a></code>
+		<span class="tooltip"><p>Get the parameters associated with a number type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numericRepresentationForType:">&ndash;&nbsp;numericRepresentationForType:</a></code>
+		<span class="tooltip"><p>Get the representation type associated with a number type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enumValuesForType:">&ndash;&nbsp;enumValuesForType:</a></code>
+		<span class="tooltip"><p>Get the values associated with an enum type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldNamesForType:">&ndash;&nbsp;fieldNamesForType:</a></code>
+		<span class="tooltip"><p>Get the names of the fields associated with a struct type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fieldsForType:">&ndash;&nbsp;fieldsForType:</a></code>
+		<span class="tooltip"><p>Get the fields associated with a struct type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringLengthForType:">&ndash;&nbsp;stringLengthForType:</a></code>
+		<span class="tooltip"><p>Get the length of this string type.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&ndash;&nbsp;name</a></code>
+		<span class="tooltip"><p>Returns the fully-qualified name of this schema.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/protocolLevel">&ndash;&nbsp;protocolLevel</a></code>
+		<span class="tooltip"><p>Returns the protocol level of this schema</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resources">&ndash;&nbsp;resources</a></code>
+		<span class="tooltip"><p>Returns an NSDictionary containing all resource names in this schema and their corresponding type code.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/maxResourceSize">&ndash;&nbsp;maxResourceSize</a></code>
+		<span class="tooltip"><p>Returns the maximum size in bytes amongst all resource types in this schema.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/byteAlignmentForResource:">&ndash;&nbsp;byteAlignmentForResource:</a></code>
+		<span class="tooltip"><p>Get the alignment of a named resource</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/idForResource:">&ndash;&nbsp;idForResource:</a></code>
+		<span class="tooltip"><p>Get the unique id associated with a named resource</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nameForResourceWithID:">&ndash;&nbsp;nameForResourceWithID:</a></code>
+		<span class="tooltip"><p>Get the resource <a href="#//api/name/name">name</a> associated with this resource id</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeForResourceNamed:">&ndash;&nbsp;sizeForResourceNamed:</a></code>
+		<span class="tooltip"><p>Get the size of a named resource</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sizeForStandardType:">&ndash;&nbsp;sizeForStandardType:</a></code>
+		<span class="tooltip"><p>Get the size of a standard scalar type</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/alignmentForStandardType:">&ndash;&nbsp;alignmentForStandardType:</a></code>
+		<span class="tooltip"><p>Get the alignment of a standard scalar type</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/systemResources">&ndash;&nbsp;systemResources</a></code>
+		<span class="tooltip"><p>Returns a sorted NSArray containing all system resource names in this schema</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/typeOfResourceNamed:">&ndash;&nbsp;typeOfResourceNamed:</a></code>
+		<span class="tooltip"><p>Get the type of a named resource</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/owner">&ndash;&nbsp;owner</a></code>
+		<span class="tooltip"><p>Returns the owner of the schema definition this schema was created from.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/version">&ndash;&nbsp;version</a></code>
+		<span class="tooltip"><p>Returns the version of the schema definition this schema was created from.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/schemaDescription">&ndash;&nbsp;schemaDescription</a></code>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/description">description</a> associated with this schema.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/UUID">&ndash;&nbsp;UUID</a></code>
+		<span class="tooltip"><p>Returns the UUID associated with this schema.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numericalUUID">&ndash;&nbsp;numericalUUID</a></code>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/UUID">UUID</a> associated with this schema as an array of numbers.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/buildDate">&ndash;&nbsp;buildDate</a></code>
+		<span class="tooltip"><p>Returns the build number associated with this schema as an array of numbers.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/schemaHash">&ndash;&nbsp;schemaHash</a></code>
+		<span class="tooltip"><p>Returns the schema hash associated with this schema as an array of numbers.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/broadcastResourceName">&ndash;&nbsp;broadcastResourceName</a></code>
+		<span class="tooltip"><p>Returns the <a href="#//api/name/name">name</a> of the resource that is being broadcast in the advertising packets.  Returns nil if none.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/newResourceValueForResourceNamed:">&ndash;&nbsp;newResourceValueForResourceNamed:</a></code>
+		<span class="tooltip"><p>Create a new ResourceValue instance for a named resource.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/schemaFromFile:" title="schemaFromFile:"></a>
+	<h3 class="subsubtitle method-title">schemaFromFile:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates a EMResourceSchema instance from the contents of a file.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (EMSchema *)schemaFromFile:(NSString *)<em>fileName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fileName</em></dt>
+			<dd><p>a file containing JSON content</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a newly created EMResourceSchema instance</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Creates a EMResourceSchema instance from the contents of a file.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/UUID" title="UUID"></a>
+	<h3 class="subsubtitle method-title">UUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the UUID associated with this schema.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)UUID</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the UUID associated with this schema.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/accessForResource:" title="accessForResource:"></a>
+	<h3 class="subsubtitle method-title">accessForResource:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the read/write/indicator access capabilities of a named resource</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (EMResourceAccessType)accessForResource:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>a valid resource <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an NSString containing the characters &lsquo;r&rsquo;, &lsquo;w&rsquo;, and &lsquo;i&rsquo; as appropriate</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the read/write/indicator access capabilities of a named resource</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/alignmentForStandardType:" title="alignmentForStandardType:"></a>
+	<h3 class="subsubtitle method-title">alignmentForStandardType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the alignment of a standard scalar type</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)alignmentForStandardType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a scalar type code</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the alignment in bytes of this standard type</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the alignment of a standard scalar type</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the type code is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationResources" title="applicationResources"></a>
+	<h3 class="subsubtitle method-title">applicationResources</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a sorted NSArray containing all application resource names in this schema</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)applicationResources</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a sorted NSArray containing all application resource names in this schema</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/broadcastResourceName" title="broadcastResourceName"></a>
+	<h3 class="subsubtitle method-title">broadcastResourceName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/name">name</a> of the resource that is being broadcast in the advertising packets.  Returns nil if none.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)broadcastResourceName</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the <a href="#//api/name/name">name</a> of the resource that is being broadcast in the advertising packets.  Returns nil if none.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/buildDate" title="buildDate"></a>
+	<h3 class="subsubtitle method-title">buildDate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the build number associated with this schema as an array of numbers.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)buildDate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the build number associated with this schema as an array of numbers.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/byteAlignmentForResource:" title="byteAlignmentForResource:"></a>
+	<h3 class="subsubtitle method-title">byteAlignmentForResource:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the alignment of a named resource</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)byteAlignmentForResource:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>a named resource in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the alignment in bytes of this resource</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the alignment of a named resource</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enumValuesForType:" title="enumValuesForType:"></a>
+	<h3 class="subsubtitle method-title">enumValuesForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the values associated with an enum type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)enumValuesForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid enum type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a NSDictionary containing enum value names and their corresponding ordinal</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the values associated with an enum type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the enum type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldNamesForType:" title="fieldNamesForType:"></a>
+	<h3 class="subsubtitle method-title">fieldNamesForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the names of the fields associated with a struct type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)fieldNamesForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid struct type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a NSArray containing field names</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the names of the fields associated with a struct type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the struct type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/fieldsForType:" title="fieldsForType:"></a>
+	<h3 class="subsubtitle method-title">fieldsForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the fields associated with a struct type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)fieldsForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid struct type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a NSDictionary containing field names and their corresponding type code</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the fields associated with a struct type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the struct type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/idForResource:" title="idForResource:"></a>
+	<h3 class="subsubtitle method-title">idForResource:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the unique id associated with a named resource</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)idForResource:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>a named resource in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the corresponding resource id</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the unique id associated with a named resource</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/maxResourceSize" title="maxResourceSize"></a>
+	<h3 class="subsubtitle method-title">maxResourceSize</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the maximum size in bytes amongst all resource types in this schema.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)maxResourceSize</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the maximum size in bytes amongst all resource types in this schema.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the fully-qualified name of this schema.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)name</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the fully-qualified name of this schema.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nameForResourceWithID:" title="nameForResourceWithID:"></a>
+	<h3 class="subsubtitle method-title">nameForResourceWithID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the resource <a href="#//api/name/name">name</a> associated with this resource id</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)nameForResourceWithID:(NSInteger)<em>resourceId</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceId</em></dt>
+			<dd><p>a resource id</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the corresponding resource <a href="#//api/name/name">name</a></p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the resource <a href="#//api/name/name">name</a> associated with this resource id</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource id is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/idForResource:">- idForResource:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/newResourceValueForResourceNamed:" title="newResourceValueForResourceNamed:"></a>
+	<h3 class="subsubtitle method-title">newResourceValueForResourceNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Create a new ResourceValue instance for a named resource.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (EMResourceValue *)newResourceValueForResourceNamed:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>a named resource in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a newly created <a href="../Classes/EMResourceValue.html">EMResourceValue</a> to a value for this resource</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Create a new ResourceValue instance for a named resource.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberParametersForType:" title="numberParametersForType:"></a>
+	<h3 class="subsubtitle method-title">numberParametersForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the parameters associated with a number type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)numberParametersForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid number type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>a four-element NSArray holding the min, max, step, and prec parameters of this type</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the parameters associated with a number type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the number type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numericRepresentationForType:" title="numericRepresentationForType:"></a>
+	<h3 class="subsubtitle method-title">numericRepresentationForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the representation type associated with a number type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)numericRepresentationForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid number type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>an integral representation type</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the representation type associated with a number type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the number type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numericalUUID" title="numericalUUID"></a>
+	<h3 class="subsubtitle method-title">numericalUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/UUID">UUID</a> associated with this schema as an array of numbers.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)numericalUUID</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the <a href="#//api/name/UUID">UUID</a> associated with this schema as an array of numbers.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/owner" title="owner"></a>
+	<h3 class="subsubtitle method-title">owner</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the owner of the schema definition this schema was created from.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)owner</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the owner of the schema definition this schema was created from.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/protocolLevel" title="protocolLevel"></a>
+	<h3 class="subsubtitle method-title">protocolLevel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the protocol level of this schema</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)protocolLevel</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the protocol level of this schema</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resources" title="resources"></a>
+	<h3 class="subsubtitle method-title">resources</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an NSDictionary containing all resource names in this schema and their corresponding type code.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSDictionary *)resources</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an NSDictionary containing all resource names in this schema and their corresponding type code.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/schemaDescription" title="schemaDescription"></a>
+	<h3 class="subsubtitle method-title">schemaDescription</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the <a href="#//api/name/description">description</a> associated with this schema.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)schemaDescription</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the <a href="#//api/name/description">description</a> associated with this schema.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/schemaHash" title="schemaHash"></a>
+	<h3 class="subsubtitle method-title">schemaHash</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the schema hash associated with this schema as an array of numbers.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)schemaHash</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the schema hash associated with this schema as an array of numbers.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeForResourceNamed:" title="sizeForResourceNamed:"></a>
+	<h3 class="subsubtitle method-title">sizeForResourceNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the size of a named resource</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)sizeForResourceNamed:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>a named resource in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the size in bytes of this resource</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the size of a named resource</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sizeForStandardType:" title="sizeForStandardType:"></a>
+	<h3 class="subsubtitle method-title">sizeForStandardType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the size of a standard scalar type</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)sizeForStandardType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a scalar type code</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the size in bytes of this standard type</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the size of a standard scalar type</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the type code is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringLengthForType:" title="stringLengthForType:"></a>
+	<h3 class="subsubtitle method-title">stringLengthForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the length of this string type.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (int)stringLengthForType:(NSString *)<em>type</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>a valid string type <a href="#//api/name/name">name</a> in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the length of this string type</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the length of this string type.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the string type <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/systemResources" title="systemResources"></a>
+	<h3 class="subsubtitle method-title">systemResources</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a sorted NSArray containing all system resource names in this schema</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)systemResources</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a sorted NSArray containing all system resource names in this schema</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/typeOfResourceNamed:" title="typeOfResourceNamed:"></a>
+	<h3 class="subsubtitle method-title">typeOfResourceNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the type of a named resource</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)typeOfResourceNamed:(NSString *)<em>resourceName</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>resourceName</em></dt>
+			<dd><p>the <a href="#//api/name/name">name</a> of a resource in this schema</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>the type code associated with this resource</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Get the type of a named resource</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>UsageError</em></dt>
+			<dd><p>the resource <a href="#//api/name/name">name</a> is invalid</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/version" title="version"></a>
+	<h3 class="subsubtitle method-title">version</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the version of the schema definition this schema was created from.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)version</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the version of the schema definition this schema was created from.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMSchema.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					
+					<style>
+						#em-footer
+						{
+							background-color: #fff;
+							height: 100px;
+							font-size: 90%;
+							overflow: hidden;
+						}
+
+						#em-footer_logo_container
+						{
+							position: relative;
+							background-color: #d2d2d2;
+							height: 70px;
+							margin-bottom: 3px;
+						}
+
+						#em-footer_logo_container a
+						{
+							position: absolute;
+							right: 7px;
+							top: 7px;
+						}
+
+					</style>
+
+					<!-- begin em-footer -->
+					<div id="em-footer">
+						<div id="em-footer_logo_container"><a href="http://www.emmoco.com/"><img
+								src="http://www.emmoco.com/images/logo_emhub_footer.png"
+								alt="" width="85" height="57" alt="EMMOCO LOGO" /></a></div>
+					</div>
+					
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Emmoco, Inc.. All rights reserved. (Last updated: 2014-02-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		345CD2AE190C2DC900289B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2AD190C2DC900289B29 /* Foundation.framework */; };
+		345CD2B3190C2DC900289B29 /* GripAndShootSDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 345CD2B2190C2DC900289B29 /* GripAndShootSDK.h */; };
+		345CD2B5190C2DC900289B29 /* GripAndShootSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2B4190C2DC900289B29 /* GripAndShootSDK.m */; };
+		345CD2BC190C2DC900289B29 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2BB190C2DC900289B29 /* XCTest.framework */; };
+		345CD2BD190C2DC900289B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2AD190C2DC900289B29 /* Foundation.framework */; };
+		345CD2BF190C2DC900289B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2BE190C2DC900289B29 /* UIKit.framework */; };
+		345CD2C2190C2DC900289B29 /* libGripAndShootSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2AA190C2DC900289B29 /* libGripAndShootSDK.a */; };
+		345CD2C8190C2DC900289B29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2C6190C2DC900289B29 /* InfoPlist.strings */; };
+		345CD2CA190C2DC900289B29 /* GripAndShootSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2C9190C2DC900289B29 /* GripAndShootSDKTests.m */; };
+		345CD2E5190C2F0B00289B29 /* libEMFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2E4190C2F0B00289B29 /* libEMFramework.a */; };
+		345CD2E6190C2F0C00289B29 /* libEMFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2E4190C2F0B00289B29 /* libEMFramework.a */; };
+		345CD2E8190C2F1800289B29 /* system.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2E7190C2F1800289B29 /* system.json */; };
+		345CD2EB190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
+		345CD2EC190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
+		345CD2EE190C320E00289B29 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2ED190C320E00289B29 /* CoreBluetooth.framework */; };
+		345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2EF190C413B00289B29 /* grip_and_shoot.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		345CD2C0190C2DC900289B29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345CD2A2190C2DC900289B29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 345CD2A9190C2DC900289B29;
+			remoteInfo = GripAndShootSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		345CD2A8190C2DC900289B29 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				345CD2B3190C2DC900289B29 /* GripAndShootSDK.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		345CD2AA190C2DC900289B29 /* libGripAndShootSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGripAndShootSDK.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		345CD2AD190C2DC900289B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		345CD2B1190C2DC900289B29 /* GripAndShootSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GripAndShootSDK-Prefix.pch"; sourceTree = "<group>"; };
+		345CD2B2190C2DC900289B29 /* GripAndShootSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GripAndShootSDK.h; sourceTree = "<group>"; };
+		345CD2B4190C2DC900289B29 /* GripAndShootSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GripAndShootSDK.m; sourceTree = "<group>"; };
+		345CD2BA190C2DC900289B29 /* GripAndShootSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GripAndShootSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		345CD2BB190C2DC900289B29 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		345CD2BE190C2DC900289B29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		345CD2C5190C2DC900289B29 /* GripAndShootSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GripAndShootSDKTests-Info.plist"; sourceTree = "<group>"; };
+		345CD2C7190C2DC900289B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		345CD2C9190C2DC900289B29 /* GripAndShootSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GripAndShootSDKTests.m; sourceTree = "<group>"; };
+		345CD2D5190C2EFF00289B29 /* EMBluetoothLowEnergyConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBluetoothLowEnergyConnectionType.h; sourceTree = "<group>"; };
+		345CD2D6190C2EFF00289B29 /* EMChecksum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChecksum.h; sourceTree = "<group>"; };
+		345CD2D7190C2EFF00289B29 /* EMConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnection.h; sourceTree = "<group>"; };
+		345CD2D8190C2EFF00289B29 /* EMConnectionListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionListManager.h; sourceTree = "<group>"; };
+		345CD2D9190C2EFF00289B29 /* EMConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionManager.h; sourceTree = "<group>"; };
+		345CD2DA190C2EFF00289B29 /* EMConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionType.h; sourceTree = "<group>"; };
+		345CD2DB190C2EFF00289B29 /* EMDeviceBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDeviceBasicDescription.h; sourceTree = "<group>"; };
+		345CD2DC190C2EFF00289B29 /* EMFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFramework.h; sourceTree = "<group>"; };
+		345CD2DD190C2EFF00289B29 /* EMResourceValue+CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMResourceValue+CocoaAdditions.h"; sourceTree = "<group>"; };
+		345CD2DE190C2EFF00289B29 /* EMResourceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMResourceValue.h; sourceTree = "<group>"; };
+		345CD2DF190C2EFF00289B29 /* EMRSSIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRSSIFilter.h; sourceTree = "<group>"; };
+		345CD2E0190C2EFF00289B29 /* EMSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSchema.h; sourceTree = "<group>"; };
+		345CD2E1190C2EFF00289B29 /* EMSerialPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSerialPacket.h; sourceTree = "<group>"; };
+		345CD2E2190C2EFF00289B29 /* EMSignalStrengthFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSignalStrengthFilter.h; sourceTree = "<group>"; };
+		345CD2E3190C2EFF00289B29 /* EMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTypes.h; sourceTree = "<group>"; };
+		345CD2E4190C2F0B00289B29 /* libEMFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEMFramework.a; path = EmmocoMobileFramework/Framework/libEMFramework.a; sourceTree = "<group>"; };
+		345CD2E7190C2F1800289B29 /* system.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = system.json; path = EmmocoMobileFramework/Assets/system.json; sourceTree = SOURCE_ROOT; };
+		345CD2E9190C30B800289B29 /* ZMGrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMGrip.h; sourceTree = "<group>"; };
+		345CD2EA190C30B800289B29 /* ZMGrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMGrip.m; sourceTree = "<group>"; };
+		345CD2ED190C320E00289B29 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		345CD2EF190C413B00289B29 /* grip_and_shoot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grip_and_shoot.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		345CD2A7190C2DC900289B29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345CD2EE190C320E00289B29 /* CoreBluetooth.framework in Frameworks */,
+				345CD2E5190C2F0B00289B29 /* libEMFramework.a in Frameworks */,
+				345CD2AE190C2DC900289B29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345CD2B7190C2DC900289B29 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345CD2BC190C2DC900289B29 /* XCTest.framework in Frameworks */,
+				345CD2BF190C2DC900289B29 /* UIKit.framework in Frameworks */,
+				345CD2E6190C2F0C00289B29 /* libEMFramework.a in Frameworks */,
+				345CD2C2190C2DC900289B29 /* libGripAndShootSDK.a in Frameworks */,
+				345CD2BD190C2DC900289B29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		345CD2A1190C2DC900289B29 = {
+			isa = PBXGroup;
+			children = (
+				345CD2AF190C2DC900289B29 /* GripAndShootSDK */,
+				345CD2C3190C2DC900289B29 /* GripAndShootSDKTests */,
+				345CD2AC190C2DC900289B29 /* Frameworks */,
+				345CD2AB190C2DC900289B29 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		345CD2AB190C2DC900289B29 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2AA190C2DC900289B29 /* libGripAndShootSDK.a */,
+				345CD2BA190C2DC900289B29 /* GripAndShootSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		345CD2AC190C2DC900289B29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2ED190C320E00289B29 /* CoreBluetooth.framework */,
+				345CD2E4190C2F0B00289B29 /* libEMFramework.a */,
+				345CD2AD190C2DC900289B29 /* Foundation.framework */,
+				345CD2BB190C2DC900289B29 /* XCTest.framework */,
+				345CD2BE190C2DC900289B29 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		345CD2AF190C2DC900289B29 /* GripAndShootSDK */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2EF190C413B00289B29 /* grip_and_shoot.json */,
+				345CD2D3190C2E8800289B29 /* Emmoco */,
+				345CD2B2190C2DC900289B29 /* GripAndShootSDK.h */,
+				345CD2B4190C2DC900289B29 /* GripAndShootSDK.m */,
+				345CD2B0190C2DC900289B29 /* Supporting Files */,
+				345CD2E9190C30B800289B29 /* ZMGrip.h */,
+				345CD2EA190C30B800289B29 /* ZMGrip.m */,
+			);
+			path = GripAndShootSDK;
+			sourceTree = "<group>";
+		};
+		345CD2B0190C2DC900289B29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2B1190C2DC900289B29 /* GripAndShootSDK-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		345CD2C3190C2DC900289B29 /* GripAndShootSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2C9190C2DC900289B29 /* GripAndShootSDKTests.m */,
+				345CD2C4190C2DC900289B29 /* Supporting Files */,
+			);
+			path = GripAndShootSDKTests;
+			sourceTree = "<group>";
+		};
+		345CD2C4190C2DC900289B29 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2C5190C2DC900289B29 /* GripAndShootSDKTests-Info.plist */,
+				345CD2C6190C2DC900289B29 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		345CD2D3190C2E8800289B29 /* Emmoco */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2E7190C2F1800289B29 /* system.json */,
+				345CD2D4190C2EFF00289B29 /* Headers */,
+			);
+			name = Emmoco;
+			sourceTree = "<group>";
+		};
+		345CD2D4190C2EFF00289B29 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				345CD2D5190C2EFF00289B29 /* EMBluetoothLowEnergyConnectionType.h */,
+				345CD2D6190C2EFF00289B29 /* EMChecksum.h */,
+				345CD2D7190C2EFF00289B29 /* EMConnection.h */,
+				345CD2D8190C2EFF00289B29 /* EMConnectionListManager.h */,
+				345CD2D9190C2EFF00289B29 /* EMConnectionManager.h */,
+				345CD2DA190C2EFF00289B29 /* EMConnectionType.h */,
+				345CD2DB190C2EFF00289B29 /* EMDeviceBasicDescription.h */,
+				345CD2DC190C2EFF00289B29 /* EMFramework.h */,
+				345CD2DD190C2EFF00289B29 /* EMResourceValue+CocoaAdditions.h */,
+				345CD2DE190C2EFF00289B29 /* EMResourceValue.h */,
+				345CD2DF190C2EFF00289B29 /* EMRSSIFilter.h */,
+				345CD2E0190C2EFF00289B29 /* EMSchema.h */,
+				345CD2E1190C2EFF00289B29 /* EMSerialPacket.h */,
+				345CD2E2190C2EFF00289B29 /* EMSignalStrengthFilter.h */,
+				345CD2E3190C2EFF00289B29 /* EMTypes.h */,
+			);
+			name = Headers;
+			path = EmmocoMobileFramework/Headers;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		345CD2A9190C2DC900289B29 /* GripAndShootSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345CD2CD190C2DC900289B29 /* Build configuration list for PBXNativeTarget "GripAndShootSDK" */;
+			buildPhases = (
+				345CD2A6190C2DC900289B29 /* Sources */,
+				345CD2A7190C2DC900289B29 /* Frameworks */,
+				345CD2A8190C2DC900289B29 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GripAndShootSDK;
+			productName = GripAndShootSDK;
+			productReference = 345CD2AA190C2DC900289B29 /* libGripAndShootSDK.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		345CD2B9190C2DC900289B29 /* GripAndShootSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345CD2D0190C2DC900289B29 /* Build configuration list for PBXNativeTarget "GripAndShootSDKTests" */;
+			buildPhases = (
+				345CD2B6190C2DC900289B29 /* Sources */,
+				345CD2B7190C2DC900289B29 /* Frameworks */,
+				345CD2B8190C2DC900289B29 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				345CD2C1190C2DC900289B29 /* PBXTargetDependency */,
+			);
+			name = GripAndShootSDKTests;
+			productName = GripAndShootSDKTests;
+			productReference = 345CD2BA190C2DC900289B29 /* GripAndShootSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		345CD2A2190C2DC900289B29 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Zeta Manufacturing";
+			};
+			buildConfigurationList = 345CD2A5190C2DC900289B29 /* Build configuration list for PBXProject "GripAndShootSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 345CD2A1190C2DC900289B29;
+			productRefGroup = 345CD2AB190C2DC900289B29 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				345CD2A9190C2DC900289B29 /* GripAndShootSDK */,
+				345CD2B9190C2DC900289B29 /* GripAndShootSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		345CD2B8190C2DC900289B29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */,
+				345CD2E8190C2F1800289B29 /* system.json in Resources */,
+				345CD2C8190C2DC900289B29 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		345CD2A6190C2DC900289B29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345CD2EB190C30B800289B29 /* ZMGrip.m in Sources */,
+				345CD2B5190C2DC900289B29 /* GripAndShootSDK.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		345CD2B6190C2DC900289B29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345CD2EC190C30B800289B29 /* ZMGrip.m in Sources */,
+				345CD2CA190C2DC900289B29 /* GripAndShootSDKTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		345CD2C1190C2DC900289B29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 345CD2A9190C2DC900289B29 /* GripAndShootSDK */;
+			targetProxy = 345CD2C0190C2DC900289B29 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		345CD2C6190C2DC900289B29 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345CD2C7190C2DC900289B29 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		345CD2CB190C2DC900289B29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		345CD2CC190C2DC900289B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		345CD2CE190C2DC900289B29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GripAndShootSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GripAndShootSDK/GripAndShootSDK-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		345CD2CF190C2DC900289B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/GripAndShootSDK.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GripAndShootSDK/GripAndShootSDK-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		345CD2D1190C2DC900289B29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GripAndShootSDK/GripAndShootSDK-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GripAndShootSDKTests/GripAndShootSDKTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		345CD2D2190C2DC900289B29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GripAndShootSDK/GripAndShootSDK-Prefix.pch";
+				INFOPLIST_FILE = "GripAndShootSDKTests/GripAndShootSDKTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		345CD2A5190C2DC900289B29 /* Build configuration list for PBXProject "GripAndShootSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CD2CB190C2DC900289B29 /* Debug */,
+				345CD2CC190C2DC900289B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		345CD2CD190C2DC900289B29 /* Build configuration list for PBXNativeTarget "GripAndShootSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CD2CE190C2DC900289B29 /* Debug */,
+				345CD2CF190C2DC900289B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		345CD2D0190C2DC900289B29 /* Build configuration list for PBXNativeTarget "GripAndShootSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CD2D1190C2DC900289B29 /* Debug */,
+				345CD2D2190C2DC900289B29 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 345CD2A2190C2DC900289B29 /* Project object */;
+}

@@ -1,0 +1,1200 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>EMConnectionListManager Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		
+		<div id="em-wrapper">
+			<style>
+				#utility_bar
+				{
+					position: relative;
+					height: 35px;
+					/*background: #231f20 url(../images/bg_tagline.png) no-repeat right
+					center;*/
+					background: #231f20 url(http://www.emmoco.com/images/bg_tagline.png) no-repeat right center;
+					color: #efefef;
+					overflow: hidden;
+					padding-left: 10px;
+				}
+
+				#utility_bar p
+				{
+					margin-top: 9px;
+					margin-bottom: 0;
+				}
+
+				#utility_bar a
+				{
+					color: #efefef;
+					margin-right: 15px;
+					padding: 2px;
+				}
+
+				#utility_bar a:hover
+				{
+					color: #fff;
+				}
+
+				#utility_bar a.selected
+				{
+					text-decoration: none;
+					background-color: #555;
+				}
+			</style>
+			<!-- begin utility bar -->
+			<div id="utility_bar">
+
+				<!-- user info / logout link -->
+				<p>
+					<a href="http://em-hub.com/">Em-Hub</a>
+					<a href="http://wiki.emmoco.com/">Wiki</a>
+					<a href="http://android.emmoco.com/">Android Docs</a>
+					<a class="selected" href="http://ios.emmoco.com/">iOS Docs</a>
+          <a href="http://support.emmoco.com/">Support</a>
+				</p>
+
+			</div>
+			<!-- end utility bar -->
+		
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">iOS Framework </a></h1>
+				<a id="developerHome" href="../index.html">Emmoco, Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">EMConnectionListManager Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/automaticallyConnectsToLastDevice">&nbsp;&nbsp;&nbsp;&nbsp;automaticallyConnectsToLastDevice</option>
+	
+	<option value="//api/name/devices">&nbsp;&nbsp;&nbsp;&nbsp;devices</option>
+	
+	<option value="//api/name/filterPredicate">&nbsp;&nbsp;&nbsp;&nbsp;filterPredicate</option>
+	
+	<option value="//api/name/updateRate">&nbsp;&nbsp;&nbsp;&nbsp;updateRate</option>
+	
+	<option value="//api/name/updating">&nbsp;&nbsp;&nbsp;&nbsp;updating</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/sharedManager">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedManager</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addConnectionTypeToUpdates:">&nbsp;&nbsp;&nbsp;&nbsp;- addConnectionTypeToUpdates:</option>
+	
+	<option value="//api/name/deviceBasicDescriptionForDeviceNamed:">&nbsp;&nbsp;&nbsp;&nbsp;- deviceBasicDescriptionForDeviceNamed:</option>
+	
+	<option value="//api/name/deviceScanner:didFindDevice:">&nbsp;&nbsp;&nbsp;&nbsp;- deviceScanner:didFindDevice:</option>
+	
+	<option value="//api/name/deviceScanner:didLoseDevice:">&nbsp;&nbsp;&nbsp;&nbsp;- deviceScanner:didLoseDevice:</option>
+	
+	<option value="//api/name/deviceScanner:didUpdateDevice:">&nbsp;&nbsp;&nbsp;&nbsp;- deviceScanner:didUpdateDevice:</option>
+	
+	<option value="//api/name/isBluetoothAvailable">&nbsp;&nbsp;&nbsp;&nbsp;- isBluetoothAvailable</option>
+	
+	<option value="//api/name/removeConnectionToFromUpdates:">&nbsp;&nbsp;&nbsp;&nbsp;- removeConnectionToFromUpdates:</option>
+	
+	<option value="//api/name/reset">&nbsp;&nbsp;&nbsp;&nbsp;- reset</option>
+	
+	<option value="//api/name/startUpdating">&nbsp;&nbsp;&nbsp;&nbsp;- startUpdating</option>
+	
+	<option value="//api/name/stopUpdating">&nbsp;&nbsp;&nbsp;&nbsp;- stopUpdating</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/automaticallyConnectsToLastDevice">automaticallyConnectsToLastDevice</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/devices">devices</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filterPredicate">filterPredicate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateRate">updateRate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updating">updating</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedManager">sharedManager</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addConnectionTypeToUpdates:">addConnectionTypeToUpdates:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceBasicDescriptionForDeviceNamed:">deviceBasicDescriptionForDeviceNamed:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceScanner:didFindDevice:">deviceScanner:didFindDevice:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceScanner:didLoseDevice:">deviceScanner:didLoseDevice:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceScanner:didUpdateDevice:">deviceScanner:didUpdateDevice:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isBluetoothAvailable">isBluetoothAvailable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeConnectionToFromUpdates:">removeConnectionToFromUpdates:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reset">reset</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startUpdating">startUpdating</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopUpdating">stopUpdating</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="EMConnectionListManager Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">EMConnectionListManager Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/EMConnectionTypeScannerDelegate.html">EMConnectionTypeScannerDelegate</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">EMConnectionListManager.h<br />EMConnectionListManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>EMConnectionListManager is a singleton class used for viewing a list of <a href="#//api/name/devices">devices</a> available for interaction.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/devices">&nbsp;&nbsp;devices</a></code>
+		<span class="tooltip"><p>@property devices
+A list of devices that has been discovered as available by the connection list manager</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filterPredicate">&nbsp;&nbsp;filterPredicate</a></code>
+		<span class="tooltip"><p>@property filterPredicate
+A filter that allows only <a href="#//api/name/devices">devices</a> conforming to the predicate to be visible</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updating">&nbsp;&nbsp;updating</a></code>
+		<span class="tooltip"><p>@property updating
+A boolean value indicating whether or not the connection list manager is actively updating the <a href="#//api/name/devices">devices</a> list</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateRate">&nbsp;&nbsp;updateRate</a></code>
+		<span class="tooltip"><p>@property updateRate
+updateRate determines the scan frequency for discovering <a href="#//api/name/devices">devices</a></p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/automaticallyConnectsToLastDevice">&nbsp;&nbsp;automaticallyConnectsToLastDevice</a></code>
+		<span class="tooltip"><p>@param automaticallyConnectsToLastDevice
+A boolean value indicating whether or not the connection list manager should automatically connect to the last device it was connected to if it encounters it in a scan.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+		<span class="tooltip"><p>Use the +sharedManager to get the singleton, shared instance of EMConnectionListManager</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceBasicDescriptionForDeviceNamed:">&ndash;&nbsp;deviceBasicDescriptionForDeviceNamed:</a></code>
+		<span class="tooltip"><p>Retrieve a device description for a given unique identifier</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startUpdating">&ndash;&nbsp;startUpdating</a></code>
+		<span class="tooltip"><p>Tells the connection list manager to begin actively looking for <a href="#//api/name/devices">devices</a> to interact with.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopUpdating">&ndash;&nbsp;stopUpdating</a></code>
+		<span class="tooltip"><p>Tells the connection list manager to stop looking for <a href="#//api/name/devices">devices</a> to interact with.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
+		<span class="tooltip"><p>Manually clears out all <a href="#//api/name/devices">devices</a> on the connection list manager.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isBluetoothAvailable">&ndash;&nbsp;isBluetoothAvailable</a></code>
+		<span class="tooltip"><p>Detect if Bluetooth is available</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addConnectionTypeToUpdates:">&ndash;&nbsp;addConnectionTypeToUpdates:</a></code>
+		<span class="tooltip"><p>Add your own connection type outside of bluetooth low energy</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeConnectionToFromUpdates:">&ndash;&nbsp;removeConnectionToFromUpdates:</a></code>
+		<span class="tooltip"><p>Remove your own connection type outside of bluetooth low energy</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceScanner:didFindDevice:">&ndash;&nbsp;deviceScanner:didFindDevice:</a></code>
+		<span class="tooltip"><p>Tells the delegate a device was found.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceScanner:didLoseDevice:">&ndash;&nbsp;deviceScanner:didLoseDevice:</a></code>
+		<span class="tooltip"><p>Tells the delegate a device was lost.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deviceScanner:didUpdateDevice:">&ndash;&nbsp;deviceScanner:didUpdateDevice:</a></code>
+		<span class="tooltip"><p>Updates the data for a device description</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/automaticallyConnectsToLastDevice" title="automaticallyConnectsToLastDevice"></a>
+	<h3 class="subsubtitle method-title">automaticallyConnectsToLastDevice</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@param automaticallyConnectsToLastDevice
+A boolean value indicating whether or not the connection list manager should automatically connect to the last device it was connected to if it encounters it in a scan.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) BOOL automaticallyConnectsToLastDevice</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@param automaticallyConnectsToLastDevice
+A boolean value indicating whether or not the connection list manager should automatically connect to the last device it was connected to if it encounters it in a scan.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/devices" title="devices"></a>
+	<h3 class="subsubtitle method-title">devices</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@property devices
+A list of devices that has been discovered as available by the connection list manager</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *devices</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@property devices
+A list of devices that has been discovered as available by the connection list manager</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/filterPredicate" title="filterPredicate"></a>
+	<h3 class="subsubtitle method-title">filterPredicate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@property filterPredicate
+A filter that allows only <a href="#//api/name/devices">devices</a> conforming to the predicate to be visible</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSPredicate *filterPredicate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@property filterPredicate
+A filter that allows only <a href="#//api/name/devices">devices</a> conforming to the predicate to be visible</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateRate" title="updateRate"></a>
+	<h3 class="subsubtitle method-title">updateRate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@property updateRate
+updateRate determines the scan frequency for discovering <a href="#//api/name/devices">devices</a></p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSTimeInterval updateRate</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@property updateRate
+updateRate determines the scan frequency for discovering <a href="#//api/name/devices">devices</a></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updating" title="updating"></a>
+	<h3 class="subsubtitle method-title">updating</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>@property updating
+A boolean value indicating whether or not the connection list manager is actively updating the <a href="#//api/name/devices">devices</a> list</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, getter=isUpdating, readonly) BOOL updating</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>@property updating
+A boolean value indicating whether or not the connection list manager is actively updating the <a href="#//api/name/devices">devices</a> list</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="subsubtitle method-title">sharedManager</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use the +sharedManager to get the singleton, shared instance of EMConnectionListManager</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (EMConnectionListManager *)sharedManager</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Use the +sharedManager to get the singleton, shared instance of EMConnectionListManager</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addConnectionTypeToUpdates:" title="addConnectionTypeToUpdates:"></a>
+	<h3 class="subsubtitle method-title">addConnectionTypeToUpdates:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add your own connection type outside of bluetooth low energy</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)addConnectionTypeToUpdates:(id&lt;EMConnectionType&gt;)<em>connectionType</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Add your own connection type outside of bluetooth low energy</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceBasicDescriptionForDeviceNamed:" title="deviceBasicDescriptionForDeviceNamed:"></a>
+	<h3 class="subsubtitle method-title">deviceBasicDescriptionForDeviceNamed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieve a device description for a given unique identifier</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (EMDeviceBasicDescription *)deviceBasicDescriptionForDeviceNamed:(NSString *)<em>name</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The name of the device</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Retrieve a device description for a given unique identifier</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceScanner:didFindDevice:" title="deviceScanner:didFindDevice:"></a>
+	<h3 class="subsubtitle method-title">deviceScanner:didFindDevice:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate a device was found.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)deviceScanner:(id&lt;EMConnectionType&gt;)<em>scanner</em> didFindDevice:(EMDeviceBasicDescription *)<em>device</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Tells the delegate a device was found.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionType.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceScanner:didLoseDevice:" title="deviceScanner:didLoseDevice:"></a>
+	<h3 class="subsubtitle method-title">deviceScanner:didLoseDevice:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate a device was lost.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)deviceScanner:(id)<em>scanner</em> didLoseDevice:(EMDeviceBasicDescription *)<em>device</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Tells the delegate a device was lost.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionType.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deviceScanner:didUpdateDevice:" title="deviceScanner:didUpdateDevice:"></a>
+	<h3 class="subsubtitle method-title">deviceScanner:didUpdateDevice:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Updates the data for a device description</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)deviceScanner:(id)<em>scanner</em> didUpdateDevice:(EMDeviceBasicDescription *)<em>device</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Updates the data for a device description</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionType.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isBluetoothAvailable" title="isBluetoothAvailable"></a>
+	<h3 class="subsubtitle method-title">isBluetoothAvailable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Detect if Bluetooth is available</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)isBluetoothAvailable</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Detect if Bluetooth is available</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeConnectionToFromUpdates:" title="removeConnectionToFromUpdates:"></a>
+	<h3 class="subsubtitle method-title">removeConnectionToFromUpdates:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove your own connection type outside of bluetooth low energy</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeConnectionToFromUpdates:(id&lt;EMConnectionType&gt;)<em>connectionType</em></code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remove your own connection type outside of bluetooth low energy</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reset" title="reset"></a>
+	<h3 class="subsubtitle method-title">reset</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Manually clears out all <a href="#//api/name/devices">devices</a> on the connection list manager.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Manually clears out all <a href="#//api/name/devices">devices</a> on the connection list manager.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startUpdating" title="startUpdating"></a>
+	<h3 class="subsubtitle method-title">startUpdating</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the connection list manager to begin actively looking for <a href="#//api/name/devices">devices</a> to interact with.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)startUpdating</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Tells the connection list manager to begin actively looking for <a href="#//api/name/devices">devices</a> to interact with.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopUpdating" title="stopUpdating"></a>
+	<h3 class="subsubtitle method-title">stopUpdating</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the connection list manager to stop looking for <a href="#//api/name/devices">devices</a> to interact with.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)stopUpdating</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Tells the connection list manager to stop looking for <a href="#//api/name/devices">devices</a> to interact with.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">EMConnectionListManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					
+					<style>
+						#em-footer
+						{
+							background-color: #fff;
+							height: 100px;
+							font-size: 90%;
+							overflow: hidden;
+						}
+
+						#em-footer_logo_container
+						{
+							position: relative;
+							background-color: #d2d2d2;
+							height: 70px;
+							margin-bottom: 3px;
+						}
+
+						#em-footer_logo_container a
+						{
+							position: absolute;
+							right: 7px;
+							top: 7px;
+						}
+
+					</style>
+
+					<!-- begin em-footer -->
+					<div id="em-footer">
+						<div id="em-footer_logo_container"><a href="http://www.emmoco.com/"><img
+								src="http://www.emmoco.com/images/logo_emhub_footer.png"
+								alt="" width="85" height="57" alt="EMMOCO LOGO" /></a></div>
+					</div>
+					
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Emmoco, Inc.. All rights reserved. (Last updated: 2014-02-21)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

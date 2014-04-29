@@ -1,0 +1,196 @@
+{
+    "resources": {
+        "$activeParameterGroup": {
+            "id": -10,
+            "align": 1,
+            "pack": 1,
+            "attributes": {"readwrite": true},
+            "type": "E:system@emmoco.com.System/ParameterGroup",
+            "access": "rw",
+            "size": 1
+        },
+        "$schemaHash": {
+            "dim": 20,
+            "id": -6,
+            "align": 1,
+            "attributes": {"readonly": true},
+            "type": "A20:u1",
+            "access": "r",
+            "size": 20
+        },
+        "$eapProtocolLevel": {
+            "id": -3,
+            "align": 2,
+            "attributes": {"readonly": true},
+            "type": "u2",
+            "access": "r",
+            "size": 2
+        },
+        "$mcmProtocolLevel": {
+            "id": -2,
+            "align": 2,
+            "attributes": {"readonly": true},
+            "type": "u2",
+            "access": "r",
+            "size": 2
+        },
+        "$mobileRssi": {
+            "id": -8,
+            "align": 1,
+            "attributes": {"readonly": true},
+            "type": "i1",
+            "access": "r",
+            "size": 1
+        },
+        "$mcmDisconnect": {
+            "id": -9,
+            "align": 1,
+            "attributes": {"writeonly": true},
+            "type": "u1",
+            "access": "w",
+            "size": 1
+        },
+        "$eapBuildDate": {
+            "dim": 8,
+            "id": -4,
+            "align": 1,
+            "attributes": {"readonly": true},
+            "type": "A8:u1",
+            "access": "r",
+            "size": 8
+        },
+        "$resourceCount": {
+            "id": -7,
+            "align": 1,
+            "attributes": {"readonly": true},
+            "type": "S:system@emmoco.com.System/ResourceCount",
+            "access": "r",
+            "size": 2
+        },
+        "$fileIndexReset": {
+            "id": -5,
+            "align": 2,
+            "attributes": {"writeonly": true},
+            "type": "i2",
+            "access": "w",
+            "size": 2
+        }
+    },
+    "resourceNamesSys": [
+        "$activeParameterGroup",
+        "$eapBuildDate",
+        "$eapProtocolLevel",
+        "$fileIndexReset",
+        "$mcmDisconnect",
+        "$mcmProtocolLevel",
+        "$mobileRssi",
+        "$resourceCount",
+        "$schemaHash"
+    ],
+    "manifest": {
+        "protocolLevel": 13,
+        "hash": [
+            108,
+            31,
+            53,
+            92,
+            46,
+            47,
+            48,
+            241,
+            201,
+            5,
+            236,
+            253,
+            10,
+            254,
+            240,
+            187
+        ],
+        "toolVersion": "13.3.0.201307022239",
+        "name": "System",
+        "$$md5": "6c1f355c2e2f30f1c905ecfd0afef0bb",
+        "build": [
+            99,
+            80,
+            140,
+            161,
+            63,
+            1,
+            0,
+            0
+        ],
+        "date": "2013-07-02T17:41:34",
+        "idFormat": "BINARY4",
+        "maxAlign": 2,
+        "maxSize": 20,
+        "version": "13.3.0"
+    },
+    "resourceNames": [
+        "$mcmProtocolLevel",
+        "$eapProtocolLevel",
+        "$eapBuildDate",
+        "$fileIndexReset",
+        "$schemaHash",
+        "$resourceCount",
+        "$mobileRssi",
+        "$mcmDisconnect",
+        "$activeParameterGroup"
+    ],
+    "attributes": {
+        "description": "System resources schema",
+        "version": "13.3.0"
+    },
+    "types": {
+        "system@emmoco.com.System/ResourceCount": {
+            "packed": false,
+            "align": 1,
+            "type": "S:system@emmoco.com.System/ResourceCount",
+            "size": 2,
+            "fields": [
+                {
+                    "pad": 0,
+                    "align": 1,
+                    "name": "app",
+                    "type": "u1",
+                    "size": 1
+                },
+                {
+                    "pad": 0,
+                    "align": 1,
+                    "name": "sys",
+                    "type": "u1",
+                    "size": 1
+                }
+            ]
+        },
+        "std:i2": {
+            "align": 2,
+            "size": 2
+        },
+        "std:i1": {
+            "align": 1,
+            "size": 1
+        },
+        "std:u1": {
+            "align": 1,
+            "size": 1
+        },
+        "system@emmoco.com.System/ParameterGroup": {
+            "values": [
+                "GROUP_A",
+                "GROUP_B"
+            ],
+            "align": 1,
+            "pack": 1,
+            "type": "E:system@emmoco.com.System/ParameterGroup",
+            "size": 1
+        },
+        "std:u2": {
+            "align": 2,
+            "size": 2
+        }
+    },
+    "resourceNamesApp": [],
+    "imports": {"@emmoco.com.System": true}
+}
