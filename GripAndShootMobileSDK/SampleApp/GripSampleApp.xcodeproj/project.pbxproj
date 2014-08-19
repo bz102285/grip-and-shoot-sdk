@@ -395,11 +395,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GripSampleApp/GripSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GripSampleApp/GripSampleApp-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/dexter/Development/Work/Zeta/GripAndShootSDK/GripAndShootMobileSDK/Framework,
-					/Users/dexter/Development/Work/Zeta/GripAndShootSDK/EmmocoMobileFramework/Framework,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -418,11 +414,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GripSampleApp/GripSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GripSampleApp/GripSampleApp-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/dexter/Development/Work/Zeta/GripAndShootSDK/GripAndShootMobileSDK/Framework,
-					/Users/dexter/Development/Work/Zeta/GripAndShootSDK/EmmocoMobileFramework/Framework,
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
