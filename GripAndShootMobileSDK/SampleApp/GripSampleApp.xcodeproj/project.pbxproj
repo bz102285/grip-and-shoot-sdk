@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3406CBF0190E06240071B642 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 3406CBEB190E06240071B642 /* grip_and_shoot.json */; };
-		3406CBF1190E06240071B642 /* GripAndShootSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 3406CBED190E06240071B642 /* GripAndShootSDK.m */; };
-		3406CBF2190E06240071B642 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3406CBEF190E06240071B642 /* ZMGrip.m */; };
-		3406CBF6190E063E0071B642 /* system.json in Resources */ = {isa = PBXBuildFile; fileRef = 3406CBF5190E063E0071B642 /* system.json */; };
-		3406CC07190E06540071B642 /* libEMFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3406CC06190E06540071B642 /* libEMFramework.a */; };
+		34135AF019A3740600EA5BC0 /* system.json in Resources */ = {isa = PBXBuildFile; fileRef = 34135AEF19A3740600EA5BC0 /* system.json */; };
+		34135AF219A3741700EA5BC0 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 34135AF119A3741700EA5BC0 /* grip_and_shoot.json */; };
+		3431E99919A3705500483E84 /* GripAndShootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3431E99719A3705500483E84 /* GripAndShootSDK.framework */; };
 		345CD2FE190C449B00289B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2FD190C449B00289B29 /* Foundation.framework */; };
 		345CD300190C449B00289B29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2FF190C449B00289B29 /* CoreGraphics.framework */; };
 		345CD302190C449B00289B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD301190C449B00289B29 /* UIKit.framework */; };
@@ -19,7 +17,6 @@
 		345CD30A190C449B00289B29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD309190C449B00289B29 /* main.m */; };
 		345CD30E190C449B00289B29 /* ZMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD30D190C449B00289B29 /* ZMAppDelegate.m */; };
 		345CD310190C449B00289B29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345CD30F190C449B00289B29 /* Images.xcassets */; };
-		345CD317190C449B00289B29 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD316190C449B00289B29 /* XCTest.framework */; };
 		345CD318190C449B00289B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2FD190C449B00289B29 /* Foundation.framework */; };
 		345CD319190C449B00289B29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD301190C449B00289B29 /* UIKit.framework */; };
 		345CD321190C449B00289B29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345CD31F190C449B00289B29 /* InfoPlist.strings */; };
@@ -40,28 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3406CBEB190E06240071B642 /* grip_and_shoot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = grip_and_shoot.json; path = ../../GripAndShootSDK/grip_and_shoot.json; sourceTree = "<group>"; };
-		3406CBEC190E06240071B642 /* GripAndShootSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GripAndShootSDK.h; path = ../../GripAndShootSDK/GripAndShootSDK.h; sourceTree = "<group>"; };
-		3406CBED190E06240071B642 /* GripAndShootSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GripAndShootSDK.m; path = ../../GripAndShootSDK/GripAndShootSDK.m; sourceTree = "<group>"; };
-		3406CBEE190E06240071B642 /* ZMGrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZMGrip.h; path = ../../GripAndShootSDK/ZMGrip.h; sourceTree = "<group>"; };
-		3406CBEF190E06240071B642 /* ZMGrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZMGrip.m; path = ../../GripAndShootSDK/ZMGrip.m; sourceTree = "<group>"; };
-		3406CBF5190E063E0071B642 /* system.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = system.json; path = ../../EmmocoMobileFramework/Assets/system.json; sourceTree = "<group>"; };
-		3406CBF7190E064D0071B642 /* EMBluetoothLowEnergyConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMBluetoothLowEnergyConnectionType.h; path = ../../EmmocoMobileFramework/Headers/EMBluetoothLowEnergyConnectionType.h; sourceTree = "<group>"; };
-		3406CBF8190E064D0071B642 /* EMChecksum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMChecksum.h; path = ../../EmmocoMobileFramework/Headers/EMChecksum.h; sourceTree = "<group>"; };
-		3406CBF9190E064D0071B642 /* EMConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMConnection.h; path = ../../EmmocoMobileFramework/Headers/EMConnection.h; sourceTree = "<group>"; };
-		3406CBFA190E064D0071B642 /* EMConnectionListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMConnectionListManager.h; path = ../../EmmocoMobileFramework/Headers/EMConnectionListManager.h; sourceTree = "<group>"; };
-		3406CBFB190E064D0071B642 /* EMConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMConnectionManager.h; path = ../../EmmocoMobileFramework/Headers/EMConnectionManager.h; sourceTree = "<group>"; };
-		3406CBFC190E064D0071B642 /* EMConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMConnectionType.h; path = ../../EmmocoMobileFramework/Headers/EMConnectionType.h; sourceTree = "<group>"; };
-		3406CBFD190E064D0071B642 /* EMDeviceBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMDeviceBasicDescription.h; path = ../../EmmocoMobileFramework/Headers/EMDeviceBasicDescription.h; sourceTree = "<group>"; };
-		3406CBFE190E064D0071B642 /* EMFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMFramework.h; path = ../../EmmocoMobileFramework/Headers/EMFramework.h; sourceTree = "<group>"; };
-		3406CBFF190E064D0071B642 /* EMResourceValue+CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EMResourceValue+CocoaAdditions.h"; path = "../../EmmocoMobileFramework/Headers/EMResourceValue+CocoaAdditions.h"; sourceTree = "<group>"; };
-		3406CC00190E064D0071B642 /* EMResourceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMResourceValue.h; path = ../../EmmocoMobileFramework/Headers/EMResourceValue.h; sourceTree = "<group>"; };
-		3406CC01190E064D0071B642 /* EMRSSIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMRSSIFilter.h; path = ../../EmmocoMobileFramework/Headers/EMRSSIFilter.h; sourceTree = "<group>"; };
-		3406CC02190E064D0071B642 /* EMSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMSchema.h; path = ../../EmmocoMobileFramework/Headers/EMSchema.h; sourceTree = "<group>"; };
-		3406CC03190E064D0071B642 /* EMSerialPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMSerialPacket.h; path = ../../EmmocoMobileFramework/Headers/EMSerialPacket.h; sourceTree = "<group>"; };
-		3406CC04190E064D0071B642 /* EMSignalStrengthFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMSignalStrengthFilter.h; path = ../../EmmocoMobileFramework/Headers/EMSignalStrengthFilter.h; sourceTree = "<group>"; };
-		3406CC05190E064D0071B642 /* EMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMTypes.h; path = ../../EmmocoMobileFramework/Headers/EMTypes.h; sourceTree = "<group>"; };
-		3406CC06190E06540071B642 /* libEMFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEMFramework.a; path = ../../EmmocoMobileFramework/Framework/libEMFramework.a; sourceTree = "<group>"; };
+		34135AEF19A3740600EA5BC0 /* system.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = system.json; sourceTree = "<group>"; };
+		34135AF119A3741700EA5BC0 /* grip_and_shoot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grip_and_shoot.json; sourceTree = "<group>"; };
+		3431E99719A3705500483E84 /* GripAndShootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GripAndShootSDK.framework; sourceTree = "<group>"; };
 		345CD2FA190C449B00289B29 /* GripSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GripSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		345CD2FD190C449B00289B29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		345CD2FF190C449B00289B29 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +52,6 @@
 		345CD30D190C449B00289B29 /* ZMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMAppDelegate.m; sourceTree = "<group>"; };
 		345CD30F190C449B00289B29 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		345CD315190C449B00289B29 /* GripSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GripSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		345CD316190C449B00289B29 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		345CD31E190C449B00289B29 /* GripSampleAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GripSampleAppTests-Info.plist"; sourceTree = "<group>"; };
 		345CD320190C449B00289B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		345CD322190C449B00289B29 /* GripSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GripSampleAppTests.m; sourceTree = "<group>"; };
@@ -89,9 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3431E99919A3705500483E84 /* GripAndShootSDK.framework in Frameworks */,
 				345CD33A190C4A4F00289B29 /* CoreBluetooth.framework in Frameworks */,
 				345CD300190C449B00289B29 /* CoreGraphics.framework in Frameworks */,
-				3406CC07190E06540071B642 /* libEMFramework.a in Frameworks */,
 				345CD302190C449B00289B29 /* UIKit.framework in Frameworks */,
 				345CD2FE190C449B00289B29 /* Foundation.framework in Frameworks */,
 			);
@@ -101,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345CD317190C449B00289B29 /* XCTest.framework in Frameworks */,
 				345CD319190C449B00289B29 /* UIKit.framework in Frameworks */,
 				345CD318190C449B00289B29 /* Foundation.framework in Frameworks */,
 			);
@@ -110,40 +86,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3406CBF3190E06280071B642 /* SDK */ = {
+		3431E99519A3705500483E84 /* GripAndShootSDK */ = {
 			isa = PBXGroup;
 			children = (
-				3406CC06190E06540071B642 /* libEMFramework.a */,
-				3406CBEB190E06240071B642 /* grip_and_shoot.json */,
-				3406CBEC190E06240071B642 /* GripAndShootSDK.h */,
-				3406CBED190E06240071B642 /* GripAndShootSDK.m */,
-				3406CBEE190E06240071B642 /* ZMGrip.h */,
-				3406CBEF190E06240071B642 /* ZMGrip.m */,
+				3431E99719A3705500483E84 /* GripAndShootSDK.framework */,
 			);
-			name = SDK;
-			sourceTree = "<group>";
-		};
-		3406CBF4190E06350071B642 /* Emmoco */ = {
-			isa = PBXGroup;
-			children = (
-				3406CBF7190E064D0071B642 /* EMBluetoothLowEnergyConnectionType.h */,
-				3406CBF8190E064D0071B642 /* EMChecksum.h */,
-				3406CBF9190E064D0071B642 /* EMConnection.h */,
-				3406CBFA190E064D0071B642 /* EMConnectionListManager.h */,
-				3406CBFB190E064D0071B642 /* EMConnectionManager.h */,
-				3406CBFC190E064D0071B642 /* EMConnectionType.h */,
-				3406CBFD190E064D0071B642 /* EMDeviceBasicDescription.h */,
-				3406CBFE190E064D0071B642 /* EMFramework.h */,
-				3406CBFF190E064D0071B642 /* EMResourceValue+CocoaAdditions.h */,
-				3406CC00190E064D0071B642 /* EMResourceValue.h */,
-				3406CC01190E064D0071B642 /* EMRSSIFilter.h */,
-				3406CC02190E064D0071B642 /* EMSchema.h */,
-				3406CC03190E064D0071B642 /* EMSerialPacket.h */,
-				3406CC04190E064D0071B642 /* EMSignalStrengthFilter.h */,
-				3406CC05190E064D0071B642 /* EMTypes.h */,
-				3406CBF5190E063E0071B642 /* system.json */,
-			);
-			name = Emmoco;
+			path = GripAndShootSDK;
 			sourceTree = "<group>";
 		};
 		345CD2F1190C449B00289B29 = {
@@ -168,11 +116,11 @@
 		345CD2FC190C449B00289B29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3431E99519A3705500483E84 /* GripAndShootSDK */,
 				345CD339190C4A4F00289B29 /* CoreBluetooth.framework */,
 				345CD2FD190C449B00289B29 /* Foundation.framework */,
 				345CD2FF190C449B00289B29 /* CoreGraphics.framework */,
 				345CD301190C449B00289B29 /* UIKit.framework */,
-				345CD316190C449B00289B29 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -180,7 +128,8 @@
 		345CD303190C449B00289B29 /* GripSampleApp */ = {
 			isa = PBXGroup;
 			children = (
-				3406CBF4190E06350071B642 /* Emmoco */,
+				34135AF119A3741700EA5BC0 /* grip_and_shoot.json */,
+				34135AEF19A3740600EA5BC0 /* system.json */,
 				345CD30C190C449B00289B29 /* ZMAppDelegate.h */,
 				345CD30D190C449B00289B29 /* ZMAppDelegate.m */,
 				345CD30F190C449B00289B29 /* Images.xcassets */,
@@ -188,7 +137,6 @@
 				345CD32C190C487400289B29 /* Storyboard.storyboard */,
 				345CD32E190C489000289B29 /* ZMTestViewController.h */,
 				345CD32F190C489000289B29 /* ZMTestViewController.m */,
-				3406CBF3190E06280071B642 /* SDK */,
 			);
 			path = GripSampleApp;
 			sourceTree = "<group>";
@@ -298,11 +246,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34135AF019A3740600EA5BC0 /* system.json in Resources */,
 				345CD308190C449B00289B29 /* InfoPlist.strings in Resources */,
-				3406CBF6190E063E0071B642 /* system.json in Resources */,
+				34135AF219A3741700EA5BC0 /* grip_and_shoot.json in Resources */,
 				345CD310190C449B00289B29 /* Images.xcassets in Resources */,
 				345CD32D190C487400289B29 /* Storyboard.storyboard in Resources */,
-				3406CBF0190E06240071B642 /* grip_and_shoot.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,9 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3406CBF1190E06240071B642 /* GripAndShootSDK.m in Sources */,
 				345CD330190C489000289B29 /* ZMTestViewController.m in Sources */,
-				3406CBF2190E06240071B642 /* ZMGrip.m in Sources */,
 				345CD30A190C449B00289B29 /* main.m in Sources */,
 				345CD30E190C449B00289B29 /* ZMAppDelegate.m in Sources */,
 			);
@@ -442,6 +388,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GripAndShootSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GripSampleApp/GripSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GripSampleApp/GripSampleApp-Info.plist";
@@ -461,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GripAndShootSDK",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GripSampleApp/GripSampleApp-Prefix.pch";
 				INFOPLIST_FILE = "GripSampleApp/GripSampleApp-Info.plist";

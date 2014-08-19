@@ -9,6 +9,8 @@
 #import "GripAndShootSDK.h"
 #import "EMFramework.h"
 
+@import CoreBluetooth;
+
 NSString * const GripAndShootSDKDidDiscoverGripNotificationName = @"GripAndShootSDKDidDiscoverGripNotificationName";
 NSString * const GripAndShootGripUserInfoKey = @"GripAndShootGripUserInfoKey";
 

@@ -7,7 +7,7 @@
 //
 
 #import "ZMTestViewController.h"
-#import "GripAndShootSDK.h"
+#import <GripAndShootSDK/GripAndShootSDK.h>
 
 @interface ZMTestViewController ()
 
@@ -27,7 +27,7 @@
     [super viewDidLoad];
     
     if ([[GripAndShootSDK sharedSDK] status] == GripAndShootStatusPoweredOn) {
-        [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:0.2f];
+        [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:1.f];
         NSLog(@"Started Scanning for grips");
     }
     
@@ -88,6 +88,7 @@
         ZMGrip *grip = [[[GripAndShootSDK sharedSDK] availableGrips] firstObject];
         [[GripAndShootSDK sharedSDK] connectToGrip:grip withSuccessBlock:^{
             [[self connectButton] setTitle:NSLocalizedString(@"Disconnect", nil) forState:UIControlStateNormal];
+            [[self connectButton] setEnabled:YES];
         } failBlock:^(NSError *error) {
             [[self connectButton] setEnabled:YES];
         }];

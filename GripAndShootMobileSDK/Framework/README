@@ -1,0 +1,10 @@
+This folder contains three objects:
+
+1) GripAndShootSDK.framework
+2) system.json
+3) grip_and_shoot.json
+
+# Installation
+
+1) Import GripAndShootSDK.framework just like you would any other .framework file
+2) Add both system.json and grip_and_shoot.json to your project's main bundle
