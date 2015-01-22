@@ -26,14 +26,15 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
-    if ([[GripAndShootSDK sharedSDK] status] == GripAndShootStatusPoweredOn) {
-        [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:1.f];
-        NSLog(@"Started Scanning for grips");
-    }
-    
+    __weak typeof (self) weakSelf = self;
     [[NSNotificationCenter defaultCenter] addObserverForName:GripAndShootSDKDidDiscoverGripNotificationName object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *notification) {
         ZMGrip *grip = [[notification userInfo] objectForKey:GripAndShootGripUserInfoKey];
         NSLog(@"Discovered grip: %@", [grip name]);
+        [weakSelf showFirstGrip];
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidBecomeActiveNotification object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *note) {
+        [weakSelf showFirstGrip];
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_zoomInStarted) name:GripDidStartZoomingInNotificationName object:nil];
@@ -53,6 +54,17 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if ([GripAndShootSDK sharedSDK].connectedGrip) {
+        [[self connectButton] setTitle:NSLocalizedString(@"Disconnect", nil) forState:UIControlStateNormal];
+        [[self connectButton] setEnabled:YES];
+    }
+    else {
+        [self showFirstGrip];
+    }
+}
+
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if (object == [GripAndShootSDK sharedSDK]) {
         if ([keyPath isEqualToString:@"availableGrips"]) {
@@ -61,26 +73,35 @@
                 return;
             }
             
-            if ([[[GripAndShootSDK sharedSDK] availableGrips] count]) {
-                ZMGrip *firstGrip = [[[GripAndShootSDK sharedSDK] availableGrips] firstObject];
-                [[self deviceNameLabel] setText:[firstGrip name]];
-                [[self connectButton] setEnabled:YES];
-            }
-            else {
-                [[self deviceNameLabel] setText:NSLocalizedString(@"Scanning...", nil)];
-                [[self connectButton] setEnabled:NO];
-            }
+            [self showFirstGrip];
         }
     }
 }
 
+-(void)showFirstGrip {
+    if ([[GripAndShootSDK sharedSDK] connectedGrip]) {
+        [[self connectButton] setTitle:NSLocalizedString(@"Disconnect", nil) forState:UIControlStateNormal];
+        [[self connectButton] setEnabled:YES];
+    }
+    else if ([[[GripAndShootSDK sharedSDK] availableGrips] count]) {
+        ZMGrip *firstGrip = [[[GripAndShootSDK sharedSDK] availableGrips] firstObject];
+        [[self deviceNameLabel] setText:[firstGrip name]];
+        [[self connectButton] setEnabled:YES];
+        [[self connectButton] setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateNormal];
+    }
+    else {
+        [[self deviceNameLabel] setText:NSLocalizedString(@"Scanning...", nil)];
+        [[self connectButton] setEnabled:NO];
+    }
+}
+
 -(IBAction)connectButtonPressed:(id)sender {
+    __weak typeof (self) weakSelf = self;
     if ([[GripAndShootSDK sharedSDK] connectedGrip]) {
         [[GripAndShootSDK sharedSDK] disconnectGripWithSuccessBlock:^{
-            [[self connectButton] setEnabled:YES];
-            [[self connectButton] setTitle:NSLocalizedString(@"Connect", nil) forState:UIControlStateNormal];
+            [weakSelf showFirstGrip];
         } failBlock:^(NSError *error) {
-            [[self connectButton] setEnabled:NO];
+            [weakSelf showFirstGrip];
         }];
     }
     else {

@@ -8,3 +8,5 @@ This folder contains three objects:
 
 1) Import GripAndShootSDK.framework just like you would any other .framework file
 2) Add both system.json and grip_and_shoot.json to your project's main bundle
+
+NOTE: this framework uses objective-c categories.  To load them, add “-ObjC” to “Other Linker Flags” in your project’s build settings.

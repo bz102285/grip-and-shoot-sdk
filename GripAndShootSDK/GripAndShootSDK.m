@@ -42,6 +42,8 @@ static GripAndShootSDK *staticInstance = nil;
             [staticInstance indicatorReceived:note];
         }];
         
+        [[EMConnectionManager sharedManager] addObserver:staticInstance forKeyPath:@"connectionState" options:0 context:NULL];
+        
         if ([[EMConnectionListManager sharedManager] isBluetoothAvailable]) {
             [staticInstance setStatus:GripAndShootStatusPoweredOn];
         }
@@ -132,6 +134,13 @@ static GripAndShootSDK *staticInstance = nil;
                 [grips addObject:grip];
             }
             [self setAvailableGrips:grips];
+        }
+    }
+    else if (object == [EMConnectionManager sharedManager]) {
+        if ([keyPath isEqualToString:@"connectionState"]) {
+            if ([EMConnectionManager sharedManager].connectionState == EMConnectionStateDisconnected) {
+                self.connectedGrip = nil;
+            }
         }
     }
 }
