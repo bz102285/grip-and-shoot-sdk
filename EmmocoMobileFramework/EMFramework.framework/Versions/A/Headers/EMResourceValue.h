@@ -242,5 +242,9 @@
  */
 + (EMResourceValue*)resourceWithName:(NSString*)name ofType:(NSString*)type fromSchema:(EMSchema*)resourceSchema;
 
+-(void)setNSObjectValue:(id)object;
+
+-(id)NSObjectValue;
+
 @end
 

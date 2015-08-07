@@ -22,31 +22,14 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		34094B371B72402D00134931 /* EMFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34094B341B72402D00134931 /* EMFramework.framework */; };
 		3431E96719A36C6E00483E84 /* GripAndShootSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2B2190C2DC900289B29 /* GripAndShootSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3431E96819A36C7300483E84 /* ZMGrip.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2E9190C30B800289B29 /* ZMGrip.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3431E97119A36E4A00483E84 /* EMBluetoothLowEnergyConnectionType.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2D5190C2EFF00289B29 /* EMBluetoothLowEnergyConnectionType.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97219A36E4A00483E84 /* EMChecksum.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2D6190C2EFF00289B29 /* EMChecksum.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97319A36E4A00483E84 /* EMConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2D7190C2EFF00289B29 /* EMConnection.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97419A36E4A00483E84 /* EMConnectionListManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2D8190C2EFF00289B29 /* EMConnectionListManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97519A36E4A00483E84 /* EMConnectionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2D9190C2EFF00289B29 /* EMConnectionManager.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97619A36E4A00483E84 /* EMConnectionType.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DA190C2EFF00289B29 /* EMConnectionType.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97719A36E4A00483E84 /* EMDeviceBasicDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DB190C2EFF00289B29 /* EMDeviceBasicDescription.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97819A36E4A00483E84 /* EMFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DC190C2EFF00289B29 /* EMFramework.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97919A36E4A00483E84 /* EMResourceValue+CocoaAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DD190C2EFF00289B29 /* EMResourceValue+CocoaAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97A19A36E4A00483E84 /* EMResourceValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DE190C2EFF00289B29 /* EMResourceValue.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97B19A36E4A00483E84 /* EMRSSIFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2DF190C2EFF00289B29 /* EMRSSIFilter.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97C19A36E4A00483E84 /* EMSchema.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2E0190C2EFF00289B29 /* EMSchema.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97D19A36E4A00483E84 /* EMSerialPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2E1190C2EFF00289B29 /* EMSerialPacket.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97E19A36E4A00483E84 /* EMSignalStrengthFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2E2190C2EFF00289B29 /* EMSignalStrengthFilter.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3431E97F19A36E4A00483E84 /* EMTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 345CD2E3190C2EFF00289B29 /* EMTypes.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		345CD2B5190C2DC900289B29 /* GripAndShootSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2B4190C2DC900289B29 /* GripAndShootSDK.m */; };
 		345CD2BC190C2DC900289B29 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2BB190C2DC900289B29 /* XCTest.framework */; };
 		345CD2BD190C2DC900289B29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2AD190C2DC900289B29 /* Foundation.framework */; };
 		345CD2C8190C2DC900289B29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2C6190C2DC900289B29 /* InfoPlist.strings */; };
 		345CD2CA190C2DC900289B29 /* GripAndShootSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2C9190C2DC900289B29 /* GripAndShootSDKTests.m */; };
-		345CD2E5190C2F0B00289B29 /* libEMFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2E4190C2F0B00289B29 /* libEMFramework.a */; };
-		345CD2E6190C2F0C00289B29 /* libEMFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD2E4190C2F0B00289B29 /* libEMFramework.a */; };
-		345CD2E8190C2F1800289B29 /* system.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2E7190C2F1800289B29 /* system.json */; };
 		345CD2EB190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
 		345CD2EC190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
 		345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2EF190C413B00289B29 /* grip_and_shoot.json */; };
@@ -70,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34094B341B72402D00134931 /* EMFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EMFramework.framework; sourceTree = "<group>"; };
+		34094B351B72402D00134931 /* EMResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = EMResources.bundle; sourceTree = "<group>"; };
+		34094B361B72402D00134931 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3431E98519A36E6F00483E84 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3431E98919A36E6F00483E84 /* GripAndShootResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GripAndShootResources-Info.plist"; sourceTree = "<group>"; };
 		3431E98B19A36E6F00483E84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -83,23 +69,6 @@
 		345CD2C5190C2DC900289B29 /* GripAndShootSDKTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GripAndShootSDKTests-Info.plist"; sourceTree = "<group>"; };
 		345CD2C7190C2DC900289B29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		345CD2C9190C2DC900289B29 /* GripAndShootSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GripAndShootSDKTests.m; sourceTree = "<group>"; };
-		345CD2D5190C2EFF00289B29 /* EMBluetoothLowEnergyConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMBluetoothLowEnergyConnectionType.h; sourceTree = "<group>"; };
-		345CD2D6190C2EFF00289B29 /* EMChecksum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChecksum.h; sourceTree = "<group>"; };
-		345CD2D7190C2EFF00289B29 /* EMConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnection.h; sourceTree = "<group>"; };
-		345CD2D8190C2EFF00289B29 /* EMConnectionListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionListManager.h; sourceTree = "<group>"; };
-		345CD2D9190C2EFF00289B29 /* EMConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionManager.h; sourceTree = "<group>"; };
-		345CD2DA190C2EFF00289B29 /* EMConnectionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMConnectionType.h; sourceTree = "<group>"; };
-		345CD2DB190C2EFF00289B29 /* EMDeviceBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDeviceBasicDescription.h; sourceTree = "<group>"; };
-		345CD2DC190C2EFF00289B29 /* EMFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMFramework.h; sourceTree = "<group>"; };
-		345CD2DD190C2EFF00289B29 /* EMResourceValue+CocoaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EMResourceValue+CocoaAdditions.h"; sourceTree = "<group>"; };
-		345CD2DE190C2EFF00289B29 /* EMResourceValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMResourceValue.h; sourceTree = "<group>"; };
-		345CD2DF190C2EFF00289B29 /* EMRSSIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRSSIFilter.h; sourceTree = "<group>"; };
-		345CD2E0190C2EFF00289B29 /* EMSchema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSchema.h; sourceTree = "<group>"; };
-		345CD2E1190C2EFF00289B29 /* EMSerialPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSerialPacket.h; sourceTree = "<group>"; };
-		345CD2E2190C2EFF00289B29 /* EMSignalStrengthFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMSignalStrengthFilter.h; sourceTree = "<group>"; };
-		345CD2E3190C2EFF00289B29 /* EMTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMTypes.h; sourceTree = "<group>"; };
-		345CD2E4190C2F0B00289B29 /* libEMFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEMFramework.a; path = EmmocoMobileFramework/Framework/libEMFramework.a; sourceTree = "<group>"; };
-		345CD2E7190C2F1800289B29 /* system.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = system.json; path = EmmocoMobileFramework/Assets/system.json; sourceTree = SOURCE_ROOT; };
 		345CD2E9190C30B800289B29 /* ZMGrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMGrip.h; sourceTree = "<group>"; };
 		345CD2EA190C30B800289B29 /* ZMGrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMGrip.m; sourceTree = "<group>"; };
 		345CD2ED190C320E00289B29 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -111,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345CD2E5190C2F0B00289B29 /* libEMFramework.a in Frameworks */,
+				34094B371B72402D00134931 /* EMFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +89,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				345CD2BC190C2DC900289B29 /* XCTest.framework in Frameworks */,
-				345CD2E6190C2F0C00289B29 /* libEMFramework.a in Frameworks */,
 				345CD2BD190C2DC900289B29 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +96,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34094B331B72402D00134931 /* EmmocoMobileFramework */ = {
+			isa = PBXGroup;
+			children = (
+				34094B341B72402D00134931 /* EMFramework.framework */,
+				34094B351B72402D00134931 /* EMResources.bundle */,
+				34094B361B72402D00134931 /* README.md */,
+			);
+			path = EmmocoMobileFramework;
+			sourceTree = "<group>";
+		};
 		3431E98719A36E6F00483E84 /* GripAndShootResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +127,7 @@
 		345CD2A1190C2DC900289B29 = {
 			isa = PBXGroup;
 			children = (
+				34094B331B72402D00134931 /* EmmocoMobileFramework */,
 				345CD2AF190C2DC900289B29 /* GripAndShootSDK */,
 				345CD2C3190C2DC900289B29 /* GripAndShootSDKTests */,
 				3431E98719A36E6F00483E84 /* GripAndShootResources */,
@@ -170,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				345CD2ED190C320E00289B29 /* CoreBluetooth.framework */,
-				345CD2E4190C2F0B00289B29 /* libEMFramework.a */,
 				345CD2AD190C2DC900289B29 /* Foundation.framework */,
 				345CD2BB190C2DC900289B29 /* XCTest.framework */,
 				3431E98519A36E6F00483E84 /* CoreFoundation.framework */,
@@ -182,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				345CD2EF190C413B00289B29 /* grip_and_shoot.json */,
-				345CD2D3190C2E8800289B29 /* Emmoco */,
 				345CD2B2190C2DC900289B29 /* GripAndShootSDK.h */,
 				345CD2B4190C2DC900289B29 /* GripAndShootSDK.m */,
 				345CD2E9190C30B800289B29 /* ZMGrip.h */,
@@ -209,38 +186,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		345CD2D3190C2E8800289B29 /* Emmoco */ = {
-			isa = PBXGroup;
-			children = (
-				345CD2E7190C2F1800289B29 /* system.json */,
-				345CD2D4190C2EFF00289B29 /* Headers */,
-			);
-			name = Emmoco;
-			sourceTree = "<group>";
-		};
-		345CD2D4190C2EFF00289B29 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				345CD2D5190C2EFF00289B29 /* EMBluetoothLowEnergyConnectionType.h */,
-				345CD2D6190C2EFF00289B29 /* EMChecksum.h */,
-				345CD2D7190C2EFF00289B29 /* EMConnection.h */,
-				345CD2D8190C2EFF00289B29 /* EMConnectionListManager.h */,
-				345CD2D9190C2EFF00289B29 /* EMConnectionManager.h */,
-				345CD2DA190C2EFF00289B29 /* EMConnectionType.h */,
-				345CD2DB190C2EFF00289B29 /* EMDeviceBasicDescription.h */,
-				345CD2DC190C2EFF00289B29 /* EMFramework.h */,
-				345CD2DD190C2EFF00289B29 /* EMResourceValue+CocoaAdditions.h */,
-				345CD2DE190C2EFF00289B29 /* EMResourceValue.h */,
-				345CD2DF190C2EFF00289B29 /* EMRSSIFilter.h */,
-				345CD2E0190C2EFF00289B29 /* EMSchema.h */,
-				345CD2E1190C2EFF00289B29 /* EMSerialPacket.h */,
-				345CD2E2190C2EFF00289B29 /* EMSignalStrengthFilter.h */,
-				345CD2E3190C2EFF00289B29 /* EMTypes.h */,
-			);
-			name = Headers;
-			path = EmmocoMobileFramework/Headers;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -250,21 +195,6 @@
 			files = (
 				3431E96719A36C6E00483E84 /* GripAndShootSDK.h in Headers */,
 				3431E96819A36C7300483E84 /* ZMGrip.h in Headers */,
-				3431E97119A36E4A00483E84 /* EMBluetoothLowEnergyConnectionType.h in Headers */,
-				3431E97219A36E4A00483E84 /* EMChecksum.h in Headers */,
-				3431E97319A36E4A00483E84 /* EMConnection.h in Headers */,
-				3431E97419A36E4A00483E84 /* EMConnectionListManager.h in Headers */,
-				3431E97519A36E4A00483E84 /* EMConnectionManager.h in Headers */,
-				3431E97619A36E4A00483E84 /* EMConnectionType.h in Headers */,
-				3431E97719A36E4A00483E84 /* EMDeviceBasicDescription.h in Headers */,
-				3431E97819A36E4A00483E84 /* EMFramework.h in Headers */,
-				3431E97919A36E4A00483E84 /* EMResourceValue+CocoaAdditions.h in Headers */,
-				3431E97A19A36E4A00483E84 /* EMResourceValue.h in Headers */,
-				3431E97B19A36E4A00483E84 /* EMRSSIFilter.h in Headers */,
-				3431E97C19A36E4A00483E84 /* EMSchema.h in Headers */,
-				3431E97D19A36E4A00483E84 /* EMSerialPacket.h in Headers */,
-				3431E97E19A36E4A00483E84 /* EMSignalStrengthFilter.h in Headers */,
-				3431E97F19A36E4A00483E84 /* EMTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,7 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */,
-				345CD2E8190C2F1800289B29 /* system.json in Resources */,
 				345CD2C8190C2DC900289B29 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n";
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -522,6 +451,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/GripAndShootSDK.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -543,6 +476,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/GripAndShootSDK.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EmmocoMobileFramework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				LIBRARY_SEARCH_PATHS = (

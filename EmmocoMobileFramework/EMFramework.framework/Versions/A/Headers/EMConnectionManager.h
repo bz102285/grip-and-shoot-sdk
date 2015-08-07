@@ -41,6 +41,13 @@ extern NSString * const kEMConnectionManagerErrorDomain;
 
 @property (nonatomic, strong) NSURL *defaultSchemaURL;
 
+/*
+ * Set this property if you are not loading system.json out of EMResources.bundle
+ *
+ * If in doubt, you do not need to set this property.
+ */
+@property (nonatomic, strong) NSBundle *systemSchemaBundle;
+
 
 /**
  @property backgroundUpdatesEnabled

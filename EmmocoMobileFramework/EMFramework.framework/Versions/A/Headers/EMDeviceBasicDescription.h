@@ -1,4 +1,4 @@
-#import "EMSignalStrengthFilter.h"
+#import "EMRSSIFilter.h"
 
 @protocol EMConnectionType;
 

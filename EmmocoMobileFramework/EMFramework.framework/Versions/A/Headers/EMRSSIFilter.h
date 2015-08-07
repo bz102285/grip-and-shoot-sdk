@@ -13,7 +13,4 @@
 
 +(EMRSSIFilter *)filterWithInitialRSSI:(float)rssi;
 
--(id)initWithInitialSignalStrengthValue:(float)signalStrengthValue;
--(float)addSignalStrengthValue:(float)signalStrengthValue;
-
 @end

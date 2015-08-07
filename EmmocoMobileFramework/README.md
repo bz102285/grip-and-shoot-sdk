@@ -34,15 +34,14 @@ On http://em-hub.com, you can download the “Mobile Schema” for any schema, w
 	Add the following frameworks to your list of “Link Binary with Libraries” in your project’s build phases.
 
 	• Corebluetooth.framework
-	• libEMFramework.a
 
-### Add the framework and headers to your project
+### Add the framework to your project
 
-	Copy all the files in the “Headers” directory of the mobile framework into your project.
+	Link your project against the EMFramework.framework
 
-### Add the system and application Schemas to your project
+### Add the resources bundle to your project
 
-	To add a schema to your project, simply copy it into your application bundle. The system.json schema is required. It can be found in the “Assets” folder of the mobile framework. Then, copy the schemas for your application over to the project.
+	To add a schema to your project, simply copy it into your application bundle. All resources provided in the EMResources.Bundle are required.  Make sure to add this bundle to your “copy bundle resources” build phase.
 
 That’s it! You’re ready to go.
 

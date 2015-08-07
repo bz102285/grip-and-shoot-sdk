@@ -7,11 +7,12 @@
 //
 
 #import "GripAndShootSDK.h"
-#import "EMFramework.h"
+#import <EMFramework/EMFramework.h>
 
 @import CoreBluetooth;
 
 NSString * const GripAndShootSDKDidDiscoverGripNotificationName = @"GripAndShootSDKDidDiscoverGripNotificationName";
+NSString * const GripAndShootDidConnectGripNotificationName = @"GripAndShootDidConnectGripNotificationName";
 NSString * const GripAndShootGripUserInfoKey = @"GripAndShootGripUserInfoKey";
 
 NSString * const GripDidStartZoomingInNotificationName = @"GripDidStartZoomingInNotificationName";
@@ -19,6 +20,8 @@ NSString * const GripDidStartZoomingOutNotificationName = @"GripDidStartZoomingO
 NSString * const GripDidStopZoomingInNotificationName = @"GripDidStopZoomingInNotificationName";
 NSString * const GripDidStopZoomingOutNotificationName = @"GripDidStopZoomingOutNotificationName";
 NSString * const GripDidCaptureNotificationName = @"GripDidCaptureNotificationName";
+
+static NSString * const GripAndShootLastConnectedGripUserDefault = @"GripAndShootLastConnectedGripUserDefault";
 
 @interface GripAndShootSDK ()
 
@@ -84,6 +87,12 @@ static GripAndShootSDK *staticInstance = nil;
     [self setScanning:YES];
 }
 
+-(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate automaticallyConnectToLastGrip:(BOOL)automaticallyConnect {
+    [[EMConnectionListManager sharedManager] setUpdateRate:scanRate];
+    [[EMConnectionListManager sharedManager] startUpdating];
+    [self setScanning:YES];
+}
+
 -(void)stopScanningForGrips {
     [[EMConnectionListManager sharedManager] stopUpdating];
     [[EMConnectionListManager sharedManager] reset];
@@ -94,6 +103,9 @@ static GripAndShootSDK *staticInstance = nil;
     [self setConnectedGrip:grip];
     EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
     [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
+        [[NSUserDefaults standardUserDefaults] setObject:description.name forKey:GripAndShootLastConnectedGripUserDefault];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:GripAndShootDidConnectGripNotificationName object:self userInfo:@{GripAndShootGripUserInfoKey : grip}];
         if (successBlock) {
             successBlock();
         }
@@ -124,6 +136,7 @@ static GripAndShootSDK *staticInstance = nil;
     if (object == [EMConnectionListManager sharedManager]) {
         if ([keyPath isEqualToString:@"devices"]) {
             NSMutableArray *grips = [NSMutableArray array];
+            NSString *lastGripName = [[NSUserDefaults standardUserDefaults] objectForKey:GripAndShootLastConnectedGripUserDefault];
             for (EMDeviceBasicDescription *device in [[EMConnectionListManager sharedManager] devices]) {
                 ZMGrip *grip = [ZMGrip new];
                 [grip setName:[device name]];
@@ -132,6 +145,15 @@ static GripAndShootSDK *staticInstance = nil;
                     [self _discoveredGrip:grip];
                 }
                 [grips addObject:grip];
+                
+                if (self.shouldAutomaticallyConnectToLastConnectedGrip && [grip.name isEqualToString:lastGripName] && self.connectedGrip == nil) {
+                    __weak typeof (self) weakSelf = self;
+                    [self connectToGrip:grip withSuccessBlock:^{
+                        
+                    } failBlock:^(NSError *error) {
+                        [weakSelf startScanningForGripsWithRate:[EMConnectionListManager sharedManager].updateRate];
+                    }];
+                }
             }
             [self setAvailableGrips:grips];
         }

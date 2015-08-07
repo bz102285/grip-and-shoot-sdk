@@ -25,6 +25,7 @@ typedef enum {
  */
 
 extern NSString * const GripAndShootSDKDidDiscoverGripNotificationName;
+extern NSString * const GripAndShootDidConnectGripNotificationName;
 extern NSString * const GripAndShootGripUserInfoKey;
 
 /*
@@ -69,6 +70,13 @@ extern NSString * const GripDidCaptureNotificationName;
 @property (nonatomic, strong) ZMGrip *connectedGrip;
 
 /*
+ @property automaticallyConnect
+ 
+ Automatically connect to the last connected grip if present
+ */
+@property (nonatomic, getter = shouldAutomaticallyConnectToLastConnectedGrip) BOOL automaticallyConnectToLastConnectedGrip;
+
+/*
  Get the shared SDK instance
  */
 +(GripAndShootSDK *)sharedSDK;
@@ -78,6 +86,13 @@ extern NSString * const GripDidCaptureNotificationName;
  @arg scanRate The frequency the SDK should scan.  This affects battery life of the device.
  */
 -(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate;
+
+/*!
+ Start scanning for available grips.  Conncet to last connected if seen in the scan
+ @arg scanRate The frequency the SDK should scan.  This affects battery life of the device.
+ @arg automaticallyConnect If YES, SDK will automatically connect to last connected grip if found
+ */
+-(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate automaticallyConnectToLastGrip:(BOOL)automaticallyConnect;
 
 /*
  Stop scanning for grips

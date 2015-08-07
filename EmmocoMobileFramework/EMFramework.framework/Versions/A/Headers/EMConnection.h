@@ -67,13 +67,18 @@ extern NSString * const kEMIndicatorResourceValueKey;
  */
 @property (nonatomic, strong) EMSchema *schema;
 
+/**
+ * The bundle from which to load the system schema
+ */
+@property (nonatomic, strong) NSBundle *systemSchemaBundle;
+
 
 /**
  * Creates a new EMConnection object.
  * Actual connection and disconnection to the named target occurs through calls to open and close on this object.
  * @param device The basic description of a device
  */
-- (id)initWithDevice:(EMDeviceBasicDescription *)device;
+-(id)initWithDevice:(EMDeviceBasicDescription *)deviceDescription systemSchemaBundle:(NSBundle *)bundle ;
 
 /**
  * Creates a new EMTargetConnection object.
@@ -81,7 +86,7 @@ extern NSString * const kEMIndicatorResourceValueKey;
  * @param device the name of the target device, including one of the pre-defined prefixes
  * @param resourceSchema the schema describing the resources available in this connection
  */
-- (id)initWithDevice:(EMDeviceBasicDescription *)device schema:(EMSchema*)resourceSchema;
+-(id)initWithDevice:(EMDeviceBasicDescription *)deviceDescription schema:(EMSchema*)schemaRef systemSchemaBundle:(NSBundle *)bundle;
 
 
 /**

@@ -5,6 +5,8 @@
 //  Copyright 2012 Emmoco, Inc.. All rights reserved.
 //
 
+#import "EMResourceValue.h"
+
 typedef enum {
     EMOperationStatusSuccess,
     EMOperationStatusFailure

@@ -13,6 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [GripAndShootSDK sharedSDK].automaticallyConnectToLastConnectedGrip = YES;
     return YES;
 }
 

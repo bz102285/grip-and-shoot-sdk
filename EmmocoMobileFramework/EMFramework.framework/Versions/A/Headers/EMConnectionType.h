@@ -52,17 +52,17 @@
 /**
  * The delegate for scanning
  */
-@property (nonatomic, unsafe_unretained) id<EMConnectionTypeScannerDelegate> scanDelegate;
+@property (nonatomic, weak) id<EMConnectionTypeScannerDelegate> scanDelegate;
 
 /**
  * The delegate for connection communication
  */
-@property (nonatomic, unsafe_unretained) id<EMDeviceDelegate> connectionDelegate;
+@property (nonatomic, weak) id<EMDeviceDelegate> connectionDelegate;
 
 /**
  * The schema for connection
  */
-@property (nonatomic, unsafe_unretained) EMSchema *schema;
+@property (nonatomic, weak) EMSchema *schema;
 
 /**
  * The last read resource value from the device
