@@ -100,6 +100,7 @@ static GripAndShootSDK *staticInstance = nil;
 }
 
 -(void)connectToGrip:(ZMGrip *)grip withSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock {
+    NSLog(@">>>> Connecting");
     [self setConnectedGrip:grip];
     EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
     [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
@@ -133,6 +134,9 @@ static GripAndShootSDK *staticInstance = nil;
 #pragma mark - KVO
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([EMConnectionManager sharedManager].connectedDevice == nil) {
+        self.connectedGrip = nil;
+    }
     if (object == [EMConnectionListManager sharedManager]) {
         if ([keyPath isEqualToString:@"devices"]) {
             NSMutableArray *grips = [NSMutableArray array];
