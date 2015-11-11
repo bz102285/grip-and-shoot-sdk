@@ -36,61 +36,64 @@ static GripAndShootSDK *staticInstance = nil;
 +(GripAndShootSDK *)sharedSDK {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        staticInstance = [[GripAndShootSDK alloc] init];
-        staticInstance->_availableGrips = [NSMutableArray array];
-        
-        [[EMConnectionListManager sharedManager] addObserver:staticInstance forKeyPath:@"devices" options:0 context:NULL];
-        
-        [[NSNotificationCenter defaultCenter] addObserverForName:kEMConnectionDidReceiveIndicatorNotificationName object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *note) {
-            [staticInstance indicatorReceived:note];
-        }];
-        
-        [[EMConnectionManager sharedManager] addObserver:staticInstance forKeyPath:@"connectionState" options:0 context:NULL];
-        
-        if ([[EMConnectionListManager sharedManager] isBluetoothAvailable]) {
-            [staticInstance setStatus:GripAndShootStatusPoweredOn];
-        }
-        else {
-            [staticInstance setStatus:GripAndShootStatusBluetoothUnavailable];
-        }
+        staticInstance = [GripAndShootSDK new];
     });
     return staticInstance;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _availableGrips = [NSMutableArray new];
+        
+        [[EMConnectionListManager sharedManager] setAutomaticallyConnectsToLastDevice:YES];
+        [[EMConnectionListManager sharedManager] addObserver:self
+                                                  forKeyPath:@"devices"
+                                                     options:0
+                                                     context:NULL];
+        
+        [[EMConnectionManager sharedManager] addObserver:self
+                                              forKeyPath:@"connectionState"
+                                                 options:0
+                                                 context:NULL];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:kEMConnectionDidReceiveIndicatorNotificationName object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *note) {
+            [self indicatorReceived:note];
+        }];
+    }
+    return self;
+}
+
 -(void)indicatorReceived:(NSNotification *)notification {
-    id value = [[notification userInfo] objectForKey:kEMIndicatorResourceKey];
-    NSString *name = [[notification userInfo] objectForKey:kEMIndicatorNameKey];
+    id value = notification.userInfo[kEMIndicatorResourceKey];
+    NSString *name = notification.userInfo[kEMIndicatorNameKey];
+    
     if ([name isEqualToString:@"zoomInButton"]) {
         if ([value isEqualToString:@"PRESSED"]) {
-            [staticInstance _startZoomingIn];
+            [self _startZoomingIn];
         }
         else {
-            [staticInstance _stopZoomingIn];
+            [self _stopZoomingIn];
         }
     }
     else if ([name isEqualToString:@"zoomOutButton"]) {
         if ([value isEqualToString:@"PRESSED"]) {
-            [staticInstance _startZoomingOut];
+            [self _startZoomingOut];
         }
         else {
-            [staticInstance _stopZoomingOut];
+            [self _stopZoomingOut];
         }
     }
     else if ([name isEqualToString:@"pictureButton"]) {
-        [staticInstance _capture];
+        [self _capture];
     }
 }
 
 -(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate {
     [[EMConnectionListManager sharedManager] setUpdateRate:scanRate];
     [[EMConnectionListManager sharedManager] startUpdating];
-    [self setScanning:YES];
-}
-
--(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate automaticallyConnectToLastGrip:(BOOL)automaticallyConnect {
-    [[EMConnectionListManager sharedManager] setUpdateRate:scanRate];
-    [[EMConnectionListManager sharedManager] startUpdating];
-    [self setScanning:YES];
+    self.scanning = YES;
 }
 
 -(void)stopScanningForGrips {
@@ -99,28 +102,52 @@ static GripAndShootSDK *staticInstance = nil;
     [self setScanning:NO];
 }
 
--(void)connectToGrip:(ZMGrip *)grip withSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock {
-    NSLog(@">>>> Connecting");
-    [self setConnectedGrip:grip];
+-(void)connectToGrip:(ZMGrip *)grip
+    withSuccessBlock:(void(^)(void))successBlock
+           failBlock:(void(^)(NSError *error))failBlock
+{
     EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
-    [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
-        [[NSUserDefaults standardUserDefaults] setObject:description.name forKey:GripAndShootLastConnectedGripUserDefault];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [[NSNotificationCenter defaultCenter] postNotificationName:GripAndShootDidConnectGripNotificationName object:self userInfo:@{GripAndShootGripUserInfoKey : grip}];
-        if (successBlock) {
-            successBlock();
-        }
-    } onFail:^(NSError *error) {
-        [self setConnectedGrip:nil];
+    if (description == nil) {
         if (failBlock) {
-            failBlock(error);
+#warning - Fill in error
+            failBlock(nil);
         }
-    }];
+        return;
+    }
+    
+    EMConnectionState state = [EMConnectionManager sharedManager].connectionState;
+    if (state == EMConnectionStatePending || state == EMConnectionStateConnected || state == EMConnectionStatePendingForDefaultSchema) {
+        if (failBlock) {
+#warning - Fill in error
+            failBlock(nil);
+        }
+        return;
+    }
+    
+    self.connectedGrip = grip;
+    
+    __weak typeof (self) weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
+            [[NSUserDefaults standardUserDefaults] setObject:description.name forKey:GripAndShootLastConnectedGripUserDefault];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [[NSNotificationCenter defaultCenter] postNotificationName:GripAndShootDidConnectGripNotificationName object:weakSelf userInfo:@{GripAndShootGripUserInfoKey : grip}];
+            if (successBlock) {
+                successBlock();
+            }
+        } onFail:^(NSError *error) {
+            weakSelf.connectedGrip = nil;
+            if (failBlock) {
+                failBlock(error);
+            }
+        }];
+    });
 }
 
 -(void)disconnectGripWithSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock {
+    __weak typeof (self) weakSelf = self;
     [[EMConnectionManager sharedManager] disconnectWithSuccess:^{
-        [self setConnectedGrip:nil];
+        weakSelf.connectedGrip = nil;
         if (successBlock) {
             successBlock();
         }
@@ -140,7 +167,6 @@ static GripAndShootSDK *staticInstance = nil;
     if (object == [EMConnectionListManager sharedManager]) {
         if ([keyPath isEqualToString:@"devices"]) {
             NSMutableArray *grips = [NSMutableArray array];
-            NSString *lastGripName = [[NSUserDefaults standardUserDefaults] objectForKey:GripAndShootLastConnectedGripUserDefault];
             for (EMDeviceBasicDescription *device in [[EMConnectionListManager sharedManager] devices]) {
                 ZMGrip *grip = [ZMGrip new];
                 [grip setName:[device name]];
@@ -149,25 +175,36 @@ static GripAndShootSDK *staticInstance = nil;
                     [self _discoveredGrip:grip];
                 }
                 [grips addObject:grip];
-                
-                if (self.shouldAutomaticallyConnectToLastConnectedGrip && [grip.name isEqualToString:lastGripName] && self.connectedGrip == nil) {
-                    __weak typeof (self) weakSelf = self;
-                    [self connectToGrip:grip withSuccessBlock:^{
-                        
-                    } failBlock:^(NSError *error) {
-                        [weakSelf startScanningForGripsWithRate:[EMConnectionListManager sharedManager].updateRate];
-                    }];
-                }
             }
             [self setAvailableGrips:grips];
         }
     }
     else if (object == [EMConnectionManager sharedManager]) {
         if ([keyPath isEqualToString:@"connectionState"]) {
-            if ([EMConnectionManager sharedManager].connectionState == EMConnectionStateDisconnected) {
-                self.connectedGrip = nil;
-            }
+            [self _connectionStateDidChange:[EMConnectionManager sharedManager].connectionState];
         }
+    }
+}
+
+- (void)_connectionStateDidChange:(EMConnectionState)state {
+    switch (state) {
+        case EMConnectionStateDisconnected:
+        case EMConnectionStateDisrupted:
+        case EMConnectionStateTimeout:
+        case EMConnectionStateSchemaNotFound:
+        case EMConnectionStateInvalidSchemaHash:
+            self.connectedGrip = nil;
+            break;
+        case EMConnectionStateConnected:
+        {
+            NSString *connectedGripName = [EMConnectionManager sharedManager].connectedDevice.name;
+            ZMGrip *grip = [ZMGrip new];
+            grip.name = connectedGripName;
+            self.connectedGrip = grip;
+            break;
+        }
+        default:
+            break;
     }
 }
 

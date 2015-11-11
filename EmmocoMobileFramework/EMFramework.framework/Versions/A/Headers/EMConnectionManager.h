@@ -24,6 +24,7 @@ typedef enum {
     EMConnectionManagerErrorNoSchemaAvailable,
     EMConnectionManagerErrorCouldNotDisconnect,
     EMConnectionManagerErrorDeviceNotAvailable,
+    EMConnectionManagerErrorDeviceAlreadyConnected
 } EMConnectionManagerError;
 
 extern NSString * const kEMConnectionManagerErrorDomain;
@@ -61,6 +62,20 @@ extern NSString * const kEMConnectionManagerErrorDomain;
  */
 
 +(EMConnectionManager *)sharedManager;
+
+/**
+ * If using a bundle other than the default EMResources.bundle, use this method to set the bundle name
+ *
+ * @param bundleName The name of the bundle to use (excluding ".bundle")
+ * @return BOOL based on whether a bundle matching the supplied bundleName can be found. If NO, systemSchemaBundle remains set to the default
+ */
+
+-(BOOL)setBundleName:(NSString *)bundleName;
+
+/**
+ * YES if a device connection isn't active or pending.  NO otherwise.
+ */
+-(BOOL)canConnect;
 
 /**
  *  Tells the connection manager to connect to a specific device.

@@ -243,7 +243,7 @@
 		345CD2A2190C2DC900289B29 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Zeta Manufacturing";
 			};
 			buildConfigurationList = 345CD2A5190C2DC900289B29 /* Build configuration list for PBXProject "GripAndShootSDK" */;
@@ -394,6 +394,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -513,6 +514,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeta.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -533,6 +535,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/EmmocoMobileFramework/Framework",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zeta.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};

@@ -9,14 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "ZMGrip.h"
 
-#pragma mark - State
-
-typedef enum {
-    GripAndShootStatusPoweredOff,
-    GripAndShootStatusBluetoothUnavailable,
-    GripAndShootStatusPoweredOn,
-} GripAndShootStatus;
-
 #pragma mark - Notifications
 
 /*
@@ -54,27 +46,12 @@ extern NSString * const GripDidCaptureNotificationName;
 @property (nonatomic, strong) NSMutableArray *availableGrips;
 
 /*
- @property status
- 
- Check this property to see if bluetooth is available before taking action
- If the value is GripAndShootStatusBluetoothUnavailable, the device does not support BLE and cannot connect to grips
- */
-@property (nonatomic) GripAndShootStatus status;
-
-/*
  @property connectedGrip
  
  The currently connected grip.  nil if no grip is connected.
  */
 
 @property (nonatomic, strong) ZMGrip *connectedGrip;
-
-/*
- @property automaticallyConnect
- 
- Automatically connect to the last connected grip if present
- */
-@property (nonatomic, getter = shouldAutomaticallyConnectToLastConnectedGrip) BOOL automaticallyConnectToLastConnectedGrip;
 
 /*
  Get the shared SDK instance
@@ -86,13 +63,6 @@ extern NSString * const GripDidCaptureNotificationName;
  @arg scanRate The frequency the SDK should scan.  This affects battery life of the device.
  */
 -(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate;
-
-/*!
- Start scanning for available grips.  Conncet to last connected if seen in the scan
- @arg scanRate The frequency the SDK should scan.  This affects battery life of the device.
- @arg automaticallyConnect If YES, SDK will automatically connect to last connected grip if found
- */
--(void)startScanningForGripsWithRate:(NSTimeInterval)scanRate automaticallyConnectToLastGrip:(BOOL)automaticallyConnect;
 
 /*
  Stop scanning for grips
@@ -107,12 +77,14 @@ extern NSString * const GripDidCaptureNotificationName;
 /*
  Connect to a grip
  */
-
--(void)connectToGrip:(ZMGrip *)grip withSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock;
+-(void)connectToGrip:(ZMGrip *)grip
+    withSuccessBlock:(void(^)(void))successBlock
+           failBlock:(void(^)(NSError *error))failBlock;
 
 /*
  Disconnect from a grip
  */
--(void)disconnectGripWithSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock;
+-(void)disconnectGripWithSuccessBlock:(void(^)(void))successBlock
+                            failBlock:(void(^)(NSError *error))failBlock;
 
 @end

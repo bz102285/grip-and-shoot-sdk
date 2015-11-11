@@ -13,7 +13,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [GripAndShootSDK sharedSDK].automaticallyConnectToLastConnectedGrip = YES;
     return YES;
 }
 
@@ -36,10 +35,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    if ([[GripAndShootSDK sharedSDK] status] == GripAndShootStatusPoweredOn) {
-        [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:1.f];
-        NSLog(@"Started Scanning for grips");
-    }
+    [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:0.2f];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
