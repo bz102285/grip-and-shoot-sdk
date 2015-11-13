@@ -1,6 +1,4 @@
 # xcode noise
-build/*
-build-output/*
 *.perspective
 *.perspectivev3
 *.pbxuser
@@ -10,7 +8,7 @@ build-output/*
 *.mode1v3
 xcuserdata
 Snapshots
-
+build_results/*
 # osx noise
 .DS_Store
 
