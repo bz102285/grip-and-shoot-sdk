@@ -30,9 +30,9 @@
     [[NSNotificationCenter defaultCenter] addObserverForName:GripAndShootSDKDidDiscoverGripNotificationName object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *notification) {
         ZMGrip *grip = [[notification userInfo] objectForKey:GripAndShootGripUserInfoKey];
         [[GripAndShootSDK sharedSDK] connectToGrip:grip withSuccessBlock:^{
-            
+            NSLog(@"Successfully connected from SDK");
         } failBlock:^(NSError *error) {
-            
+            NSLog(@"Failed to connect: %@", error.localizedDescription);
         }];
     }];
     

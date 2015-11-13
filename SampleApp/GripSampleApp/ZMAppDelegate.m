@@ -35,7 +35,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:0.2f];
+    [[GripAndShootSDK sharedSDK] startScanningForGripsWithRate:1.f];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

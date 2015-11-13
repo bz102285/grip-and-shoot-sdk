@@ -9,6 +9,8 @@
 #import "GripAndShootSDK.h"
 #import <EMFramework/EMFramework.h>
 
+NSString * const GripAndShootErrorDomain = @"GripAndShootErrorDomain";
+
 @import CoreBluetooth;
 
 NSString * const GripAndShootSDKDidDiscoverGripNotificationName = @"GripAndShootSDKDidDiscoverGripNotificationName";
@@ -109,8 +111,8 @@ static GripAndShootSDK *staticInstance = nil;
     EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
     if (description == nil) {
         if (failBlock) {
-#warning - Fill in error
-            failBlock(nil);
+            NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorCannotFindDevice userInfo:nil];
+            failBlock(error);
         }
         return;
     }
@@ -118,8 +120,8 @@ static GripAndShootSDK *staticInstance = nil;
     EMConnectionState state = [EMConnectionManager sharedManager].connectionState;
     if (state == EMConnectionStatePending || state == EMConnectionStateConnected || state == EMConnectionStatePendingForDefaultSchema) {
         if (failBlock) {
-#warning - Fill in error
-            failBlock(nil);
+            NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorConnectionAlreadyPending userInfo:nil];
+            failBlock(error);
         }
         return;
     }
@@ -135,6 +137,7 @@ static GripAndShootSDK *staticInstance = nil;
             if (successBlock) {
                 successBlock();
             }
+            
         } onFail:^(NSError *error) {
             weakSelf.connectedGrip = nil;
             if (failBlock) {

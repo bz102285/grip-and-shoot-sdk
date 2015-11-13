@@ -9,6 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "ZMGrip.h"
 
+typedef NS_ENUM(NSUInteger, GripAndShootError) {
+    GripAndShootErrorCannotFindDevice,
+    GripAndShootErrorConnectionAlreadyPending
+};
+
+extern NSString * const GripAndShootErrorDomain;
+
 #pragma mark - Notifications
 
 /*
