@@ -49,7 +49,6 @@ static GripAndShootSDK *staticInstance = nil;
     if (self) {
         _availableGrips = [NSMutableArray new];
         
-        [[EMConnectionListManager sharedManager] setAutomaticallyConnectsToLastDevice:YES];
         [[EMConnectionListManager sharedManager] addObserver:self
                                                   forKeyPath:@"devices"
                                                      options:0
@@ -108,42 +107,49 @@ static GripAndShootSDK *staticInstance = nil;
     withSuccessBlock:(void(^)(void))successBlock
            failBlock:(void(^)(NSError *error))failBlock
 {
-    EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
-    if (description == nil) {
-        if (failBlock) {
-            NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorCannotFindDevice userInfo:nil];
-            failBlock(error);
-        }
-        return;
-    }
-    
-    EMConnectionState state = [EMConnectionManager sharedManager].connectionState;
-    if (state == EMConnectionStatePending || state == EMConnectionStateConnected || state == EMConnectionStatePendingForDefaultSchema) {
-        if (failBlock) {
-            NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorConnectionAlreadyPending userInfo:nil];
-            failBlock(error);
-        }
-        return;
-    }
-    
-    self.connectedGrip = grip;
-    
-    __weak typeof (self) weakSelf = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
-            [[NSUserDefaults standardUserDefaults] setObject:description.name forKey:GripAndShootLastConnectedGripUserDefault];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            [[NSNotificationCenter defaultCenter] postNotificationName:GripAndShootDidConnectGripNotificationName object:weakSelf userInfo:@{GripAndShootGripUserInfoKey : grip}];
-            if (successBlock) {
-                successBlock();
-            }
-            
-        } onFail:^(NSError *error) {
-            weakSelf.connectedGrip = nil;
+    /*
+     There is an existing bug in the firmware that causes a broken connection
+     if the board is connected to immediately upon waking up.
+     
+     This dispatch guarantees we do not hit that particular issue.
+     */
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        EMDeviceBasicDescription *description = [[EMConnectionListManager sharedManager] deviceBasicDescriptionForDeviceNamed:[grip name]];
+        if (description == nil) {
             if (failBlock) {
+                NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorCannotFindDevice userInfo:nil];
                 failBlock(error);
             }
-        }];
+            return;
+        }
+        
+        EMConnectionState state = [EMConnectionManager sharedManager].connectionState;
+        if (state == EMConnectionStatePending || state == EMConnectionStateConnected || state == EMConnectionStatePendingForDefaultSchema) {
+            if (failBlock) {
+                NSError *error = [NSError errorWithDomain:GripAndShootErrorDomain code:GripAndShootErrorConnectionAlreadyPending userInfo:nil];
+                failBlock(error);
+            }
+            return;
+        }
+        
+        __weak typeof (self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[EMConnectionManager sharedManager] connectDevice:description onSuccess:^{
+                weakSelf.connectedGrip = grip;
+                [[NSUserDefaults standardUserDefaults] setObject:description.name forKey:GripAndShootLastConnectedGripUserDefault];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                [[NSNotificationCenter defaultCenter] postNotificationName:GripAndShootDidConnectGripNotificationName object:weakSelf userInfo:@{GripAndShootGripUserInfoKey : grip}];
+                if (successBlock) {
+                    successBlock();
+                }
+                
+            } onFail:^(NSError *error) {
+                weakSelf.connectedGrip = nil;
+                if (failBlock) {
+                    failBlock(error);
+                }
+            }];
+        });
     });
 }
 

@@ -29,11 +29,13 @@
     
     [[NSNotificationCenter defaultCenter] addObserverForName:GripAndShootSDKDidDiscoverGripNotificationName object:nil queue:[NSOperationQueue currentQueue] usingBlock:^(NSNotification *notification) {
         ZMGrip *grip = [[notification userInfo] objectForKey:GripAndShootGripUserInfoKey];
-        [[GripAndShootSDK sharedSDK] connectToGrip:grip withSuccessBlock:^{
-            NSLog(@"Successfully connected from SDK");
-        } failBlock:^(NSError *error) {
-            NSLog(@"Failed to connect: %@", error.localizedDescription);
-        }];
+        if ([GripAndShootSDK sharedSDK].connectedGrip == nil) {
+            [[GripAndShootSDK sharedSDK] connectToGrip:grip withSuccessBlock:^{
+                NSLog(@"Successfully connected from SDK");
+            } failBlock:^(NSError *error) {
+                NSLog(@"Failed to connect: %@", error.localizedDescription);
+            }];
+        }
     }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_zoomInStarted) name:GripDidStartZoomingInNotificationName object:nil];
