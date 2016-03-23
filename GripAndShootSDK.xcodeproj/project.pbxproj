@@ -14,6 +14,7 @@
 				3431E97019A36DB000483E84 /* Build Framework */,
 			);
 			dependencies = (
+				34CA334C1CA2F5FE00657AA2 /* PBXTargetDependency */,
 				3431E96F19A36D9900483E84 /* PBXTargetDependency */,
 			);
 			name = Framework;
@@ -33,6 +34,7 @@
 		345CD2EB190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
 		345CD2EC190C30B800289B29 /* ZMGrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD2EA190C30B800289B29 /* ZMGrip.m */; };
 		345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2EF190C413B00289B29 /* grip_and_shoot.json */; };
+		34CA334D1CA2F60B00657AA2 /* grip_and_shoot.json in Resources */ = {isa = PBXBuildFile; fileRef = 345CD2EF190C413B00289B29 /* grip_and_shoot.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 345CD2A9190C2DC900289B29;
 			remoteInfo = GripAndShootSDK;
+		};
+		34CA334B1CA2F5FE00657AA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 345CD2A2190C2DC900289B29 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34CA33441CA2F5E100657AA2;
+			remoteInfo = GripAndShootResources;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -73,6 +82,8 @@
 		345CD2EA190C30B800289B29 /* ZMGrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMGrip.m; sourceTree = "<group>"; };
 		345CD2ED190C320E00289B29 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		345CD2EF190C413B00289B29 /* grip_and_shoot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = grip_and_shoot.json; sourceTree = "<group>"; };
+		34CA33451CA2F5E100657AA2 /* GripAndShootResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GripAndShootResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		34CA33471CA2F5E100657AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +101,13 @@
 			files = (
 				345CD2BC190C2DC900289B29 /* XCTest.framework in Frameworks */,
 				345CD2BD190C2DC900289B29 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CA33421CA2F5E100657AA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +149,7 @@
 				345CD2AF190C2DC900289B29 /* GripAndShootSDK */,
 				345CD2C3190C2DC900289B29 /* GripAndShootSDKTests */,
 				3431E98719A36E6F00483E84 /* GripAndShootResources */,
+				34CA33461CA2F5E100657AA2 /* GripAndShootResources */,
 				345CD2AC190C2DC900289B29 /* Frameworks */,
 				345CD2AB190C2DC900289B29 /* Products */,
 			);
@@ -141,6 +160,7 @@
 			children = (
 				345CD2AA190C2DC900289B29 /* libGripAndShootSDK.a */,
 				345CD2BA190C2DC900289B29 /* GripAndShootSDKTests.xctest */,
+				34CA33451CA2F5E100657AA2 /* GripAndShootResources.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +204,14 @@
 				345CD2C6190C2DC900289B29 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34CA33461CA2F5E100657AA2 /* GripAndShootResources */ = {
+			isa = PBXGroup;
+			children = (
+				34CA33471CA2F5E100657AA2 /* Info.plist */,
+			);
+			path = GripAndShootResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +265,23 @@
 			productReference = 345CD2BA190C2DC900289B29 /* GripAndShootSDKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		34CA33441CA2F5E100657AA2 /* GripAndShootResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34CA334A1CA2F5E100657AA2 /* Build configuration list for PBXNativeTarget "GripAndShootResources" */;
+			buildPhases = (
+				34CA33411CA2F5E100657AA2 /* Sources */,
+				34CA33421CA2F5E100657AA2 /* Frameworks */,
+				34CA33431CA2F5E100657AA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GripAndShootResources;
+			productName = GripAndShootResources;
+			productReference = 34CA33451CA2F5E100657AA2 /* GripAndShootResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,6 +290,11 @@
 			attributes = {
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Zeta Manufacturing";
+				TargetAttributes = {
+					34CA33441CA2F5E100657AA2 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
 			};
 			buildConfigurationList = 345CD2A5190C2DC900289B29 /* Build configuration list for PBXProject "GripAndShootSDK" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -261,6 +311,7 @@
 				345CD2A9190C2DC900289B29 /* GripAndShootSDK */,
 				345CD2B9190C2DC900289B29 /* GripAndShootSDKTests */,
 				3431E96A19A36D8F00483E84 /* Framework */,
+				34CA33441CA2F5E100657AA2 /* GripAndShootResources */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +323,14 @@
 			files = (
 				345CD2F0190C413B00289B29 /* grip_and_shoot.json in Resources */,
 				345CD2C8190C2DC900289B29 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34CA33431CA2F5E100657AA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34CA334D1CA2F60B00657AA2 /* grip_and_shoot.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +386,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		34CA33411CA2F5E100657AA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -339,6 +405,11 @@
 			isa = PBXTargetDependency;
 			target = 345CD2A9190C2DC900289B29 /* GripAndShootSDK */;
 			targetProxy = 345CD2C0190C2DC900289B29 /* PBXContainerItemProxy */;
+		};
+		34CA334C1CA2F5FE00657AA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34CA33441CA2F5E100657AA2 /* GripAndShootResources */;
+			targetProxy = 34CA334B1CA2F5FE00657AA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -541,6 +612,51 @@
 			};
 			name = Release;
 		};
+		34CA33481CA2F5E100657AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GripAndShootResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gripandshoot.GripAndShootResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		34CA33491CA2F5E100657AA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = GripAndShootResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gripandshoot.GripAndShootResources;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -579,6 +695,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		34CA334A1CA2F5E100657AA2 /* Build configuration list for PBXNativeTarget "GripAndShootResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34CA33481CA2F5E100657AA2 /* Debug */,
+				34CA33491CA2F5E100657AA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

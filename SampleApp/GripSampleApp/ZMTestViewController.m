@@ -31,7 +31,7 @@
         ZMGrip *grip = [[notification userInfo] objectForKey:GripAndShootGripUserInfoKey];
         if ([GripAndShootSDK sharedSDK].connectedGrip == nil) {
             [[GripAndShootSDK sharedSDK] connectToGrip:grip withSuccessBlock:^{
-                NSLog(@"Successfully connected from SDK");
+                NSLog(@"Successfully connected grip");
             } failBlock:^(NSError *error) {
                 NSLog(@"Failed to connect: %@", error.localizedDescription);
             }];

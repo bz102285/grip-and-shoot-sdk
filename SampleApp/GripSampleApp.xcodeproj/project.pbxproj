@@ -23,9 +23,10 @@
 		345CD32D190C487400289B29 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345CD32C190C487400289B29 /* Storyboard.storyboard */; };
 		345CD330190C489000289B29 /* ZMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345CD32F190C489000289B29 /* ZMTestViewController.m */; };
 		345CD33A190C4A4F00289B29 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345CD339190C4A4F00289B29 /* CoreBluetooth.framework */; };
+		34CA33511CA2F67B00657AA2 /* GripAndShootResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34CA334F1CA2F67B00657AA2 /* GripAndShootResources.bundle */; };
+		34CA33521CA2F67B00657AA2 /* GripAndShootSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CA33501CA2F67B00657AA2 /* GripAndShootSDK.framework */; };
 		34CE44B51B74545B003E2383 /* EMFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34CE44B41B74545B003E2383 /* EMFramework.framework */; };
 		34CE44B71B745465003E2383 /* EMResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 34CE44B61B745465003E2383 /* EMResources.bundle */; };
-		34CE44B81B745512003E2383 /* libGripAndShootSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3485A9741A7094330093851F /* libGripAndShootSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,27 +36,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 345CD2F9190C449B00289B29;
 			remoteInfo = GripSampleApp;
-		};
-		3485A9731A7094330093851F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 345CD2AA190C2DC900289B29;
-			remoteInfo = GripAndShootSDK;
-		};
-		3485A9751A7094330093851F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 345CD2BA190C2DC900289B29;
-			remoteInfo = GripAndShootSDKTests;
-		};
-		3485A9771A70943E0093851F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 345CD2A9190C2DC900289B29;
-			remoteInfo = GripAndShootSDK;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -81,7 +61,8 @@
 		345CD32E190C489000289B29 /* ZMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZMTestViewController.h; sourceTree = "<group>"; };
 		345CD32F190C489000289B29 /* ZMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZMTestViewController.m; sourceTree = "<group>"; };
 		345CD339190C4A4F00289B29 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GripAndShootSDK.xcodeproj; path = ../GripAndShootSDK.xcodeproj; sourceTree = "<group>"; };
+		34CA334F1CA2F67B00657AA2 /* GripAndShootResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GripAndShootResources.bundle; sourceTree = "<group>"; };
+		34CA33501CA2F67B00657AA2 /* GripAndShootSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GripAndShootSDK.framework; sourceTree = "<group>"; };
 		34CE44B41B74545B003E2383 /* EMFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMFramework.framework; path = ../EmmocoMobileFramework/EMFramework.framework; sourceTree = "<group>"; };
 		34CE44B61B745465003E2383 /* EMResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EMResources.bundle; path = ../EmmocoMobileFramework/EMResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,10 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34CE44B81B745512003E2383 /* libGripAndShootSDK.a in Frameworks */,
 				345CD33A190C4A4F00289B29 /* CoreBluetooth.framework in Frameworks */,
 				34CE44B51B74545B003E2383 /* EMFramework.framework in Frameworks */,
 				345CD300190C449B00289B29 /* CoreGraphics.framework in Frameworks */,
+				34CA33521CA2F67B00657AA2 /* GripAndShootSDK.framework in Frameworks */,
 				345CD302190C449B00289B29 /* UIKit.framework in Frameworks */,
 				345CD2FE190C449B00289B29 /* Foundation.framework in Frameworks */,
 			);
@@ -115,6 +96,7 @@
 		345CD2F1190C449B00289B29 = {
 			isa = PBXGroup;
 			children = (
+				34CA334E1CA2F67B00657AA2 /* GripAndShootMobileSDK */,
 				34CE44B61B745465003E2383 /* EMResources.bundle */,
 				345CD303190C449B00289B29 /* GripSampleApp */,
 				345CD31C190C449B00289B29 /* GripSampleAppTests */,
@@ -136,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				34CE44B41B74545B003E2383 /* EMFramework.framework */,
-				3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */,
 				345CD339190C4A4F00289B29 /* CoreBluetooth.framework */,
 				345CD2FD190C449B00289B29 /* Foundation.framework */,
 				345CD2FF190C449B00289B29 /* CoreGraphics.framework */,
@@ -190,13 +171,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3485A96E1A7094330093851F /* Products */ = {
+		34CA334E1CA2F67B00657AA2 /* GripAndShootMobileSDK */ = {
 			isa = PBXGroup;
 			children = (
-				3485A9741A7094330093851F /* libGripAndShootSDK.a */,
-				3485A9761A7094330093851F /* GripAndShootSDKTests.xctest */,
+				34CA334F1CA2F67B00657AA2 /* GripAndShootResources.bundle */,
+				34CA33501CA2F67B00657AA2 /* GripAndShootSDK.framework */,
 			);
-			name = Products;
+			name = GripAndShootMobileSDK;
+			path = ../GripAndShootMobileSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +195,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3485A9781A70943E0093851F /* PBXTargetDependency */,
 			);
 			name = GripSampleApp;
 			productName = GripSampleApp;
@@ -266,12 +247,6 @@
 			mainGroup = 345CD2F1190C449B00289B29;
 			productRefGroup = 345CD2FB190C449B00289B29 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 3485A96E1A7094330093851F /* Products */;
-					ProjectRef = 3485A96D1A7094330093851F /* GripAndShootSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				345CD2F9190C449B00289B29 /* GripSampleApp */,
@@ -279,23 +254,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		3485A9741A7094330093851F /* libGripAndShootSDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGripAndShootSDK.a;
-			remoteRef = 3485A9731A7094330093851F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3485A9761A7094330093851F /* GripAndShootSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GripAndShootSDKTests.xctest;
-			remoteRef = 3485A9751A7094330093851F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		345CD2F8190C449B00289B29 /* Resources */ = {
@@ -306,6 +264,7 @@
 				34CE44B71B745465003E2383 /* EMResources.bundle in Resources */,
 				345CD308190C449B00289B29 /* InfoPlist.strings in Resources */,
 				34135AF219A3741700EA5BC0 /* grip_and_shoot.json in Resources */,
+				34CA33511CA2F67B00657AA2 /* GripAndShootResources.bundle in Resources */,
 				345CD310190C449B00289B29 /* Images.xcassets in Resources */,
 				345CD32D190C487400289B29 /* Storyboard.storyboard in Resources */,
 			);
@@ -347,11 +306,6 @@
 			isa = PBXTargetDependency;
 			target = 345CD2F9190C449B00289B29 /* GripSampleApp */;
 			targetProxy = 345CD31A190C449B00289B29 /* PBXContainerItemProxy */;
-		};
-		3485A9781A70943E0093851F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GripAndShootSDK;
-			targetProxy = 3485A9771A70943E0093851F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

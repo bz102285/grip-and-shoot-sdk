@@ -9,13 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "ZMGrip.h"
 
-#pragma mark - State
+typedef NS_ENUM(NSUInteger, GripAndShootError) {
+    GripAndShootErrorCannotFindDevice,
+    GripAndShootErrorConnectionAlreadyPending
+};
 
-typedef enum {
-    GripAndShootStatusPoweredOff,
-    GripAndShootStatusBluetoothUnavailable,
-    GripAndShootStatusPoweredOn,
-} GripAndShootStatus;
+extern NSString * const GripAndShootErrorDomain;
 
 #pragma mark - Notifications
 
@@ -25,6 +24,7 @@ typedef enum {
  */
 
 extern NSString * const GripAndShootSDKDidDiscoverGripNotificationName;
+extern NSString * const GripAndShootDidConnectGripNotificationName;
 extern NSString * const GripAndShootGripUserInfoKey;
 
 /*
@@ -51,14 +51,6 @@ extern NSString * const GripDidCaptureNotificationName;
  You can observe this property to get real-time updates on available devices
  */
 @property (nonatomic, strong) NSMutableArray *availableGrips;
-
-/*
- @property status
- 
- Check this property to see if bluetooth is available before taking action
- If the value is GripAndShootStatusBluetoothUnavailable, the device does not support BLE and cannot connect to grips
- */
-@property (nonatomic) GripAndShootStatus status;
 
 /*
  @property connectedGrip
@@ -92,12 +84,14 @@ extern NSString * const GripDidCaptureNotificationName;
 /*
  Connect to a grip
  */
-
--(void)connectToGrip:(ZMGrip *)grip withSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock;
+-(void)connectToGrip:(ZMGrip *)grip
+    withSuccessBlock:(void(^)(void))successBlock
+           failBlock:(void(^)(NSError *error))failBlock;
 
 /*
  Disconnect from a grip
  */
--(void)disconnectGripWithSuccessBlock:(void(^)(void))successBlock failBlock:(void(^)(NSError *error))failBlock;
+-(void)disconnectGripWithSuccessBlock:(void(^)(void))successBlock
+                            failBlock:(void(^)(NSError *error))failBlock;
 
 @end

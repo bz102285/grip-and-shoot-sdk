@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3431E98319A36E6F00483E84"
-               BuildableName = "GripAndShootSDK.bundle"
+               BlueprintIdentifier = "34CA33441CA2F5E100657AA2"
+               BuildableName = "GripAndShootResources.bundle"
                BlueprintName = "GripAndShootResources"
                ReferencedContainer = "container:GripAndShootSDK.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3431E98319A36E6F00483E84"
-            BuildableName = "GripAndShootSDK.bundle"
+            BlueprintIdentifier = "34CA33441CA2F5E100657AA2"
+            BuildableName = "GripAndShootResources.bundle"
             BlueprintName = "GripAndShootResources"
             ReferencedContainer = "container:GripAndShootSDK.xcodeproj">
          </BuildableReference>
